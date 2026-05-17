@@ -1,5 +1,5 @@
-export const SUPABASE_URL = 'https://tbdmuznvuezgjjvlorhg.supabase.co/rest/v1/';
-export const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRiZG11em52dWV6Z2pqdmxvcmhnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg4NjM1NTMsImV4cCI6MjA5NDQzOTU1M30.L83DhdnmRNHovfubhbJUxqAlMOrkaYKoq-ET_hOwRXw';
+export const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://tbdmuznvuezgjjvlorhg.supabase.co/rest/v1/';
+export const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRiZG11em52dWV6Z2pqdmxvcmhnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg4NjM1NTMsImV4cCI6MjA5NDQzOTU1M30.L83DhdnmRNHovfubhbJUxqAlMOrkaYKoq-ET_hOwRXw';
 
 export const supabaseFetch = async (endpoint: string, options: RequestInit = {}) => {
   const headers = {
