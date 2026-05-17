@@ -381,6 +381,9 @@
                             </span>
                         </td>
                         <td class="p-4 text-center">
+                            <button onclick="showBookingDetails('${booking.id}')" class="text-primary hover:text-white transition-colors mr-3" title="View Booking Details">
+                                <i class="fas fa-eye"></i>
+                            </button>
                             <button onclick="deleteBooking('${booking.id}', '${booking.date}', '${booking.time}')" class="text-red-400 hover:text-red-300 transition-colors" title="Cancel Booking">
                                 <i class="fas fa-trash"></i>
                             </button>
@@ -388,7 +391,107 @@
                     `;
                     tbody.appendChild(tr);
                 });
+
+                // Store globally so the modal can access details instantly
+                window.allBookings = bookings;
             }
+        }
+
+        // Customer Details Modal Controls
+        function showBookingDetails(id) {
+            const booking = window.allBookings.find(b => b.id === id);
+            if (!booking) return;
+
+            const content = document.getElementById('details-modal-content');
+            const dateBooked = new Date(booking.bookedAt).toLocaleString();
+
+            content.innerHTML = `
+                <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5">
+                    <div class="w-16 h-16 rounded-full bg-primary/20 text-primary flex items-center justify-center font-serif text-2xl font-bold">
+                        ${booking.customerName ? booking.customerName.charAt(0).toUpperCase() : 'G'}
+                    </div>
+                    <div>
+                        <h4 class="text-white text-xl font-medium">${booking.customerName}</h4>
+                        <p class="text-primary text-sm font-serif">Customer Details Profile</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                        <p class="text-textSecondary text-xs uppercase tracking-wider mb-1">Contact Phone</p>
+                        <p class="text-white font-medium flex items-center gap-2">
+                            <i class="fas fa-phone text-primary text-xs"></i> ${booking.customerPhone}
+                        </p>
+                    </div>
+                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                        <p class="text-textSecondary text-xs uppercase tracking-wider mb-1">Appointment Cost</p>
+                        <p class="text-white font-medium flex items-center gap-2 text-lg">
+                            ₹${booking.price}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                    <p class="text-textSecondary text-xs uppercase tracking-wider mb-1">Service Requested</p>
+                    <p class="text-white font-medium flex items-center gap-2 text-lg">
+                        <i class="fas fa-spa text-primary text-sm"></i> ${booking.service}
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                        <p class="text-textSecondary text-xs uppercase tracking-wider mb-1">Appointment Date</p>
+                        <p class="text-white font-medium flex items-center gap-2">
+                            <i class="fas fa-calendar-alt text-primary text-xs"></i> ${booking.date}
+                        </p>
+                    </div>
+                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                        <p class="text-textSecondary text-xs uppercase tracking-wider mb-1">Time Slot</p>
+                        <p class="text-white font-medium flex items-center gap-2">
+                            <i class="fas fa-clock text-primary text-xs"></i> ${booking.time}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                    <p class="text-textSecondary text-xs uppercase tracking-wider mb-1">Service Address</p>
+                    <p class="text-white font-medium flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt text-primary text-xs"></i> ${booking.customerAddress}
+                    </p>
+                </div>
+
+                <div class="flex justify-between text-xs text-textSecondary pt-2 border-t border-white/5">
+                    <span>Reference ID: ${booking.id}</span>
+                    <span>Booked At: ${dateBooked}</span>
+                </div>
+            `;
+
+            // Configure Delete Action inside Modal
+            const deleteBtn = document.getElementById('modal-delete-btn');
+            deleteBtn.onclick = async () => {
+                closeDetailsModal();
+                await deleteBooking(booking.id, booking.date, booking.time);
+            };
+
+            const modal = document.getElementById('details-modal');
+            const card = document.getElementById('details-modal-card');
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                card.classList.remove('scale-95');
+            }, 10);
+        }
+
+        function closeDetailsModal() {
+            const modal = document.getElementById('details-modal');
+            const card = document.getElementById('details-modal-card');
+            
+            modal.classList.add('opacity-0');
+            card.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
         }
 
         // Added functionality to delete/cancel a booking for the demo
@@ -409,5 +512,33 @@
         // Run on load
         renderAdminDashboard();
     </script>
+
+    <!-- Booking Details Modal -->
+    <div id="details-modal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-[9999] flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-surface border border-white/10 w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl scale-95 transition-transform duration-300" id="details-modal-card">
+            <!-- Header -->
+            <div class="px-6 py-4 bg-black/40 border-b border-white/5 flex justify-between items-center">
+                <h3 class="text-lg font-serif text-white flex items-center gap-2">
+                    <i class="fas fa-user-circle text-primary"></i> Customer Appointment Profile
+                </h3>
+                <button onclick="closeDetailsModal()" class="text-textSecondary hover:text-white transition-colors text-xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <!-- Body -->
+            <div class="p-6 space-y-5 max-h-[70vh] overflow-y-auto" id="details-modal-content">
+                <!-- Populated by JS -->
+            </div>
+            <!-- Footer -->
+            <div class="px-6 py-4 bg-black/40 border-t border-white/5 flex justify-between gap-3 items-center">
+                <button id="modal-delete-btn" class="bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 px-5 py-2 rounded-full text-red-400 text-sm transition-colors flex items-center gap-2">
+                    <i class="fas fa-trash-alt"></i> Cancel Appointment
+                </button>
+                <button onclick="closeDetailsModal()" class="bg-primary hover:bg-primary/95 text-black font-semibold px-6 py-2 rounded-full text-sm transition-colors">
+                    Close Details
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
