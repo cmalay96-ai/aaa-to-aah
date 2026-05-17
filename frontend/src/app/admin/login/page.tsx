@@ -71,7 +71,7 @@ export default function AdminLoginPage() {
                   value={email}
                   onChange={e => setEmail(e.target.value)}
                   className="w-full bg-background border border-white/10 rounded-lg py-2.5 pl-10 pr-4 text-white placeholder:text-gray-600 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                  placeholder="admin@heal.com"
+                  placeholder="cmalay96@gmail.com"
                 />
               </div>
             </div>
