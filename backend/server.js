@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const path = require('path');
 
 dotenv.config();
 
@@ -17,6 +18,19 @@ app.use('/api/appointments', require('./routes/appointments'));
 // SaaS Admin Routes
 app.use('/api/saas/auth', require('./routes/saasAuth'));
 app.use('/api/saas/orders', require('./routes/saasOrders'));
+
+// Serve static assets from the parent directory (images, pdfs, etc.)
+app.use(express.static(path.join(__dirname, '../')));
+
+// Serve the index.html landing page at the root route
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../index.html'));
+});
+
+// Serve the admin dashboard HTML at /admin
+app.get('/admin', (req, res) => {
+  res.sendFile(path.join(__dirname, '../admin.html'));
+});
 
 // Basic health check route
 app.get('/api/health', (req, res) => {
