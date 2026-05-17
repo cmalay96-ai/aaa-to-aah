@@ -350,13 +350,13 @@
                     const tr = document.createElement('tr');
                     tr.className = "hover:bg-white/5 transition-colors";
                     tr.innerHTML = `
-                        <td class="p-4">
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center font-serif font-bold">
+                        <td class="p-4 cursor-pointer" onclick="showBookingDetails('${booking.id}')">
+                            <div class="flex items-center gap-3 group/cust">
+                                <div class="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center font-serif font-bold group-hover/cust:bg-primary group-hover/cust:text-black transition-all duration-300">
                                     ${initial}
                                 </div>
                                 <div>
-                                    <p class="text-white font-medium">${booking.customerName}</p>
+                                    <p class="text-white font-medium group-hover/cust:text-primary transition-colors duration-300">${booking.customerName}</p>
                                     <p class="text-textSecondary text-xs">Booked: ${dateBooked}</p>
                                 </div>
                             </div>
