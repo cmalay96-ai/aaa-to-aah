@@ -19,17 +19,17 @@ app.use('/api/appointments', require('./routes/appointments'));
 app.use('/api/saas/auth', require('./routes/saasAuth'));
 app.use('/api/saas/orders', require('./routes/saasOrders'));
 
-// Serve static assets from the parent directory (images, pdfs, etc.)
-app.use(express.static(path.join(__dirname, '../')));
+// Serve static assets from the public directory (images, pdfs, etc.)
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Serve the index.html landing page at the root route
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 // Serve the admin dashboard HTML at /admin
 app.get('/admin', (req, res) => {
-  res.sendFile(path.join(__dirname, '../admin.html'));
+  res.sendFile(path.join(__dirname, 'public/admin.html'));
 });
 
 // Basic health check route

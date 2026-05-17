@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heal | Luxury Home Massage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D4AF37",
+                        secondary: "#1A1A1A",
+                        background: "#0A0A0A",
+                        surface: "#111111",
+                        textPrimary: "#F5F5F5",
+                        textSecondary: "#A3A3A3",
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #F5F5F5;
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            font-family: '"Playfair Display"', serif;
+        }
+        .hero-bg {
+            background-color: #0A0A0A;
+            background-image: linear-gradient(to bottom, rgba(10,10,10,0.3), rgba(10,10,10,0.7)), url('hero%20image%202.jpeg');
+            background-size: cover;
+            background-position: top center;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-background/80 border-b border-white/10 px-6 py-4 flex justify-between items-center">
+        <img src="logo.png" alt="Heal Logo" class="h-10 w-auto object-contain">
+        <div class="hidden md:flex space-x-8 text-sm tracking-wide">
+            <a href="#" class="text-white hover:text-primary transition-colors">Home</a>
+            <a href="#services" class="text-white hover:text-primary transition-colors">Services</a>
+            <a href="#about" class="text-white hover:text-primary transition-colors">About</a>
+            <a href="#contact" class="text-white hover:text-primary transition-colors">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <div id="auth-buttons" class="hidden md:flex items-center gap-4 text-sm font-medium">
+                <!-- Dynamically populated by JS -->
+            </div>
+            <button onclick="document.getElementById('booking-modal').classList.remove('hidden')" class="bg-primary text-black px-6 py-2 rounded-full font-medium hover:bg-white transition-colors">
+                Book Now
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex flex-col justify-end items-center text-center pb-0 md:pb-4 px-4">
+        <div class="max-w-3xl">
+            <h1 class="text-6xl md:text-7xl lg:text-8xl font-serif mb-8 leading-tight tracking-wide drop-shadow-2xl">
+                Luxury Massage, <br><span class="text-primary italic">At Your Doorstep</span>
+            </h1>
+            <button onclick="document.getElementById('booking-modal').classList.remove('hidden')" class="bg-primary text-black px-10 py-3 rounded-full text-lg font-semibold hover:bg-white transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(212,175,55,0.4)] tracking-wide">
+                Book a Free Demo
+            </button>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="py-12 bg-[#0d0d0d] border-y border-white/5 relative z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16">
+                <!-- Trust Item 1 -->
+                <div class="flex items-center gap-4 text-left">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 text-primary">
+                        <i class="fas fa-user-md text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-serif font-medium tracking-wide">Vetted Therapists</h4>
+                        <p class="text-textSecondary text-xs tracking-wider uppercase mt-1">Licensed & Certified</p>
+                    </div>
+                </div>
+                
+                <!-- Trust Item 2 -->
+                <div class="flex items-center gap-4 text-left">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 text-primary">
+                        <i class="fas fa-star text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-serif font-medium tracking-wide">5-Star Rated</h4>
+                        <p class="text-textSecondary text-xs tracking-wider uppercase mt-1">Over 500+ Reviews</p>
+                    </div>
+                </div>
+
+                <!-- Trust Item 3 -->
+                <div class="flex items-center gap-4 text-left">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 text-primary">
+                        <i class="fas fa-shield-alt text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-serif font-medium tracking-wide">100% Secure</h4>
+                        <p class="text-textSecondary text-xs tracking-wider uppercase mt-1">Background Checked</p>
+                    </div>
+                </div>
+                
+                <!-- Trust Item 4 -->
+                <div class="flex items-center gap-4 text-left">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 text-primary">
+                        <i class="fas fa-leaf text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-serif font-medium tracking-wide">Organic Oils</h4>
+                        <p class="text-textSecondary text-xs tracking-wider uppercase mt-1">Premium Quality</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="x.pdf" download class="inline-flex items-center gap-3 border border-primary/50 text-primary hover:bg-primary hover:text-black px-8 py-3 rounded-full text-sm font-medium transition-all">
+                    <i class="fas fa-file-pdf text-lg"></i>
+                    Download Police Verification Certificate
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 bg-surface">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif mb-4">Our Premium Services</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-background border border-primary/20 rounded-2xl p-8 hover:border-primary transition-colors group cursor-pointer" onclick="openBooking('Head Massage', 350)">
+                    <i class="fas fa-spa text-4xl text-primary mb-6"></i>
+                    <h3 class="text-2xl font-serif mb-3">Head Massage for Stress Relief</h3>
+                    <p class="text-textSecondary mb-6 line-clamp-2">Targeted therapy to release tension in the head, neck, and shoulders. Perfect for relieving modern stress and headaches.</p>
+                    <div class="flex justify-between items-center border-t border-white/10 pt-4 mt-auto">
+                        <span class="text-lg font-serif">45 Min | ₹350</span>
+                        <span class="text-primary group-hover:text-white transition-colors">Book &rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-background border border-primary/20 rounded-2xl p-8 hover:border-primary transition-colors group cursor-pointer" onclick="openBooking('Full Body Recovery', 500)">
+                    <i class="fas fa-leaf text-4xl text-primary mb-6"></i>
+                    <h3 class="text-2xl font-serif mb-3">Full Body Fitness Recovery</h3>
+                    <p class="text-textSecondary mb-6 line-clamp-2">Deep tissue and sports massage techniques to accelerate muscle recovery and improve flexibility.</p>
+                    <div class="flex justify-between items-center border-t border-white/10 pt-4 mt-auto">
+                        <span class="text-lg font-serif">90 Min | ₹500</span>
+                        <span class="text-primary group-hover:text-white transition-colors">Book &rarr;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-24 px-6 bg-background border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif text-white mb-4">How It Works</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12 text-center relative">
+                <!-- Connecting line for desktop -->
+                <div class="hidden md:block absolute top-12 left-[15%] right-[15%] h-0.5 bg-primary/20 z-0"></div>
+                
+                <div class="relative z-10">
+                    <div class="w-24 h-24 mx-auto bg-surface border border-primary/30 rounded-full flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+                        <i class="fas fa-calendar-alt text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-white mb-3">1. Book a Time</h3>
+                    <p class="text-textSecondary">Select your preferred service, date, and time slot through our simple booking system.</p>
+                </div>
+                
+                <div class="relative z-10">
+                    <div class="w-24 h-24 mx-auto bg-surface border border-primary/30 rounded-full flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+                        <i class="fas fa-home text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-white mb-3">2. We Come To You</h3>
+                    <p class="text-textSecondary">Our certified therapist arrives at your doorstep with everything needed for a premium experience.</p>
+                </div>
+                
+                <div class="relative z-10">
+                    <div class="w-24 h-24 mx-auto bg-surface border border-primary/30 rounded-full flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+                        <i class="fas fa-smile text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-white mb-3">3. Relax & Enjoy</h3>
+                    <p class="text-textSecondary">Experience deep relaxation and muscle recovery in the comfort and privacy of your own home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-24 px-6 bg-[#0a0a0a] border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif text-white mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-textSecondary">Have a question or special request? We're here to help.</p>
+            </div>
+            
+            <div class="bg-surface border border-primary/20 rounded-2xl p-8 md:p-12 shadow-[0_0_30px_rgba(212,175,55,0.05)]">
+                <form onsubmit="event.preventDefault(); alert('Message sent successfully! Our team will contact you soon.'); this.reset();" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm text-textSecondary mb-2">Full Name</label>
+                            <input required type="text" class="w-full bg-black border border-white/10 rounded-xl p-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-textSecondary mb-2">Email Address</label>
+                            <input required type="email" class="w-full bg-black border border-white/10 rounded-xl p-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-textSecondary mb-2">Subject</label>
+                        <input required type="text" class="w-full bg-black border border-white/10 rounded-xl p-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="How can we help?">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-textSecondary mb-2">Message</label>
+                        <textarea required rows="4" class="w-full bg-black border border-white/10 rounded-xl p-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none" placeholder="Your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-black font-bold py-4 rounded-xl hover:bg-white transition-all transform hover:scale-[1.02]">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 px-6 bg-surface border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif text-white mb-4">Client Testimonials</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-background border border-white/10 p-8 rounded-2xl relative">
+                    <i class="fas fa-quote-left text-4xl text-primary/20 absolute top-8 left-8"></i>
+                    <div class="relative z-10 pl-4 pt-2">
+                        <div class="flex text-primary mb-4 gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-textSecondary text-lg italic mb-6">"The best massage experience I've ever had. Not having to drive home after being completely relaxed makes all the difference. The therapist was incredibly professional."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-surface rounded-full flex items-center justify-center text-primary font-serif font-bold text-xl">S</div>
+                            <div>
+                                <h4 class="text-white font-medium">Sarah Jenkins</h4>
+                                <p class="text-textSecondary text-sm">Corporate Executive</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-background border border-white/10 p-8 rounded-2xl relative">
+                    <i class="fas fa-quote-left text-4xl text-primary/20 absolute top-8 left-8"></i>
+                    <div class="relative z-10 pl-4 pt-2">
+                        <div class="flex text-primary mb-4 gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-textSecondary text-lg italic mb-6">"As an athlete, recovery is crucial. The full body fitness recovery session was exactly what my muscles needed. Highly recommend their deep tissue work!"</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-surface rounded-full flex items-center justify-center text-primary font-serif font-bold text-xl">M</div>
+                            <div>
+                                <h4 class="text-white font-medium">Michael Rodriguez</h4>
+                                <p class="text-textSecondary text-sm">Marathon Runner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/5 pt-16 pb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-3xl font-serif text-white mb-4">Heal<span class="text-primary">.</span></h3>
+                    <p class="text-textSecondary mb-6 max-w-sm">
+                        Elevating your wellness journey with premium, professional massage therapy delivered directly to your doorstep.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-surface border border-white/10 flex items-center justify-center text-textSecondary hover:text-primary hover:border-primary transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-surface border border-white/10 flex items-center justify-center text-textSecondary hover:text-primary hover:border-primary transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-surface border border-white/10 flex items-center justify-center text-textSecondary hover:text-primary hover:border-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-serif text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-textSecondary">
+                        <li><a href="#" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#services" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="#" onclick="document.getElementById('booking-modal').classList.remove('hidden')" class="hover:text-primary transition-colors cursor-pointer">Book a Session</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-serif text-lg mb-6">Contact Us</h4>
+                    <ul class="space-y-3 text-textSecondary">
+                        <li>hello@healmassage.com</li>
+                        <li>+91 7908082151</li>
+                        <li class="pt-2">
+                            <p class="text-white text-sm">Working Hours:</p>
+                            <p class="text-sm">Mon-Sun: 10AM - 8PM</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-textSecondary">
+                <p>&copy; 2026 Heal Massage. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal (Static Prototype of the React Logic) -->
+    <div id="booking-modal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-surface border border-primary/30 w-full max-w-2xl rounded-2xl p-8 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="document.getElementById('booking-modal').classList.add('hidden')" class="absolute top-6 right-6 text-textSecondary hover:text-white text-xl">&times;</button>
+            
+            <h2 class="text-3xl font-serif mb-2">Book Your Session</h2>
+            <p class="text-textSecondary mb-8 text-sm" id="booking-subtitle">Select date and time</p>
+
+            <div id="step-datetime">
+                <h3 class="text-lg mb-4 text-primary">1. Select Date</h3>
+                <div class="bg-black/50 rounded-xl p-4 border border-white/10 mb-8">
+                    <div class="flex justify-between items-center mb-4">
+                        <button id="prev-month" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 text-white transition-colors">&lt;</button>
+                        <div id="current-month" class="text-white font-serif text-lg"></div>
+                        <button id="next-month" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 text-white transition-colors">&gt;</button>
+                    </div>
+                    <div class="grid grid-cols-7 gap-1 mb-2 text-center text-xs font-medium text-textSecondary">
+                        <div>Su</div><div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div>
+                    </div>
+                    <div class="grid grid-cols-7 gap-1" id="calendar-grid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <h3 class="text-lg mb-4 text-primary">2. Select Time</h3>
+                <div class="grid grid-cols-3 gap-3 mb-8" id="slots-container">
+                    <div class="col-span-3 text-textSecondary text-center py-4 border border-dashed border-white/10 rounded-xl">Please select a date first</div>
+                </div>
+                
+                <button onclick="nextStep()" class="w-full bg-primary text-black py-4 rounded-xl font-bold hover:bg-white transition-colors">Continue to Details</button>
+            </div>
+
+            <div id="step-details" class="hidden">
+                <form onsubmit="confirmBooking(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-sm text-textSecondary mb-1">Full Name</label>
+                        <input required type="text" class="w-full bg-black border border-white/20 rounded-lg p-3 text-white focus:border-primary focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-textSecondary mb-1">Phone Number</label>
+                        <input required type="tel" class="w-full bg-black border border-white/20 rounded-lg p-3 text-white focus:border-primary focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-textSecondary mb-1">Address</label>
+                        <textarea required class="w-full bg-black border border-white/20 rounded-lg p-3 text-white focus:border-primary focus:outline-none h-24"></textarea>
+                    </div>
+                    <div class="flex gap-4 mt-6">
+                        <button type="button" onclick="prevStep()" class="w-1/3 bg-transparent border border-white/20 py-4 rounded-xl hover:bg-white/5 transition-colors">Back</button>
+                        <button type="submit" class="w-2/3 bg-primary text-black py-4 rounded-xl font-bold hover:bg-white transition-colors">Confirm & Pay</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="step-success" class="hidden text-center py-8">
+                <i class="fas fa-check-circle text-6xl text-primary mb-6"></i>
+                <h2 class="text-3xl font-serif mb-4">Booking Confirmed!</h2>
+                <p class="text-textSecondary mb-8">Your massage session has been scheduled. Our therapist will arrive at your address.</p>
+                <button onclick="document.getElementById('booking-modal').classList.add('hidden')" class="border border-primary text-primary px-8 py-3 rounded-full hover:bg-primary hover:text-black transition-colors">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Handle User Authentication State
+        function updateAuthState() {
+            const userEmail = localStorage.getItem('saas_user_email');
+            const authContainer = document.getElementById('auth-buttons');
+            
+            if (userEmail) {
+                authContainer.innerHTML = `
+                    <a href="http://localhost:3000/saas-customer" class="text-white hover:text-primary transition-colors">Dashboard</a>
+                    <button onclick="logoutCustomer()" class="text-textSecondary hover:text-white transition-colors">Log Out</button>
+                `;
+            } else {
+                authContainer.innerHTML = `
+                    <a href="http://localhost:3000/saas-auth/login" class="text-white hover:text-primary transition-colors">Log In</a>
+                `;
+            }
+        }
+
+        function logoutCustomer() {
+            localStorage.removeItem('saas_user_email');
+            updateAuthState();
+        }
+
+        // Initialize auth state
+        updateAuthState();
+
+        // Generate Calendar Dates
+        const grid = document.getElementById('calendar-grid');
+        let currentMonthDate = new Date();
+        currentMonthDate.setDate(1); 
+        
+        function renderCalendar() {
+            grid.innerHTML = '';
+            document.getElementById('current-month').innerText = currentMonthDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+            
+            const year = currentMonthDate.getFullYear();
+            const month = currentMonthDate.getMonth();
+            
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            
+            const today = new Date();
+            today.setHours(0,0,0,0);
+            
+            for(let i = 0; i < firstDay; i++) {
+                const empty = document.createElement('div');
+                grid.appendChild(empty);
+            }
+            
+            for(let i = 1; i <= daysInMonth; i++) {
+                const date = new Date(year, month, i);
+                const btn = document.createElement('button');
+                const isPast = date < today;
+                
+                btn.className = `aspect-square flex items-center justify-center rounded-lg text-sm transition-all border border-transparent ${isPast ? 'text-white/20 cursor-not-allowed' : 'text-white hover:border-primary hover:bg-primary/10 cursor-pointer'} date-btn`;
+                btn.innerText = i;
+                
+                if (!isPast) {
+                    btn.onclick = function() {
+                        document.querySelectorAll('.date-btn').forEach(b => {
+                            b.classList.remove('bg-primary', 'text-black', 'border-primary', 'font-bold');
+                            if(!b.classList.contains('cursor-not-allowed')) {
+                                b.classList.add('text-white');
+                            }
+                        });
+                        this.classList.add('bg-primary', 'text-black', 'border-primary', 'font-bold');
+                        this.classList.remove('text-white');
+                        
+                        window.selectedDateKey = `${year}-${String(month + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
+                        if (typeof renderSlots === 'function') renderSlots();
+                    }
+                }
+                
+                grid.appendChild(btn);
+            }
+            
+            const prevBtn = document.getElementById('prev-month');
+            prevBtn.disabled = (year === today.getFullYear() && month === today.getMonth());
+            prevBtn.style.opacity = prevBtn.disabled ? '0.3' : '1';
+        }
+
+        document.getElementById('prev-month').onclick = () => {
+            currentMonthDate.setMonth(currentMonthDate.getMonth() - 1);
+            renderCalendar();
+        };
+        
+        document.getElementById('next-month').onclick = () => {
+            currentMonthDate.setMonth(currentMonthDate.getMonth() + 1);
+            renderCalendar();
+        };
+
+        renderCalendar();
+
+        const SUPABASE_URL = 'https://tbdmuznvuezgjjvlorhg.supabase.co/rest/v1/';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRiZG11em52dWV6Z2pqdmxvcmhnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg4NjM1NTMsImV4cCI6MjA5NDQzOTU1M30.L83DhdnmRNHovfubhbJUxqAlMOrkaYKoq-ET_hOwRXw';
+
+        const TIME_SLOTS = ["10:00 AM", "11:00 AM", "1:00 PM", "3:00 PM", "5:00 PM", "7:00 PM"];
+        
+        async function renderSlots() {
+            const slotsContainer = document.getElementById('slots-container');
+            if(!slotsContainer) return;
+            slotsContainer.innerHTML = '';
+            
+            let bookedSlots = [];
+            try {
+                const res = await fetch(`${SUPABASE_URL}bookings?date=eq.${window.selectedDateKey}&select=time`, {
+                    headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` }
+                });
+                if(res.ok) {
+                    const data = await res.json();
+                    bookedSlots = data.map(b => b.time);
+                }
+            } catch(e) { console.error("Failed to fetch slots", e); }
+            
+            TIME_SLOTS.forEach(slot => {
+                const btn = document.createElement('button');
+                const isBooked = bookedSlots.includes(slot);
+                
+                if (isBooked) {
+                    btn.className = "slot-btn py-3 border border-white/20 rounded-lg bg-black text-white/30 cursor-not-allowed";
+                    btn.disabled = true;
+                    btn.innerHTML = `${slot}<br><span class="text-[10px] text-red-400">Booked</span>`;
+                } else {
+                    btn.className = "slot-btn py-3 border border-white/20 rounded-lg hover:border-primary hover:bg-primary/10 transition-all bg-transparent text-white";
+                    btn.innerText = slot;
+                    btn.onclick = function() {
+                        document.querySelectorAll('.slot-btn').forEach(b => {
+                            if(!b.hasAttribute('disabled')) {
+                                b.classList.remove('bg-primary', 'text-black');
+                                b.classList.add('bg-transparent', 'text-white');
+                            }
+                        });
+                        this.classList.add('bg-primary', 'text-black');
+                        this.classList.remove('bg-transparent', 'text-white');
+                    }
+                }
+                slotsContainer.appendChild(btn);
+            });
+        }
+
+        function openBooking(service, price) {
+            document.getElementById('booking-modal').classList.remove('hidden');
+            document.getElementById('step-datetime').classList.remove('hidden');
+            document.getElementById('step-details').classList.add('hidden');
+            document.getElementById('step-success').classList.add('hidden');
+            document.getElementById('booking-subtitle').innerText = `Booking: ${service} (₹${price})`;
+        }
+
+        function nextStep() {
+            document.getElementById('step-datetime').classList.add('hidden');
+            document.getElementById('step-details').classList.remove('hidden');
+        }
+
+        function prevStep() {
+            document.getElementById('step-details').classList.add('hidden');
+            document.getElementById('step-datetime').classList.remove('hidden');
+        }
+
+        async function confirmBooking(e) {
+            e.preventDefault();
+            
+            const selectedSlotBtn = document.querySelector('.slot-btn.bg-primary');
+            if (window.selectedDateKey && selectedSlotBtn) {
+                const selectedSlot = selectedSlotBtn.innerText.split('\n')[0].trim();
+                
+                const name = document.querySelector('input[type="text"]').value || "Guest User";
+                const phone = document.querySelector('input[type="tel"]').value || "N/A";
+                const address = document.querySelector('textarea').value || "N/A";
+                
+                const serviceRaw = document.getElementById('booking-subtitle').innerText;
+                const serviceMatch = serviceRaw.match(/Booking: (.*) \(₹(\d+)\)/);
+                const service = serviceMatch ? serviceMatch[1] : "Premium Massage";
+                const price = serviceMatch ? parseInt(serviceMatch[2]) : 350;
+
+                try {
+                    await fetch(`${SUPABASE_URL}bookings`, {
+                        method: 'POST',
+                        headers: { 
+                            'apikey': SUPABASE_KEY, 
+                            'Authorization': `Bearer ${SUPABASE_KEY}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            date: window.selectedDateKey,
+                            time: selectedSlot,
+                            service: service,
+                            price: price,
+                            customerName: name,
+                            customerPhone: phone,
+                            customerAddress: address,
+                            bookedAt: new Date().toISOString()
+                        })
+                    });
+                } catch(err) {
+                    console.error("Booking failed", err);
+                    alert("Failed to confirm booking.");
+                }
+            }
+            
+            document.getElementById('step-details').classList.add('hidden');
+            document.getElementById('step-success').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
