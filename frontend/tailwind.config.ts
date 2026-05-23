@@ -15,6 +15,15 @@ const config: Config = {
         surface: "#111111", // Slightly lighter black for cards
         textPrimary: "#F5F5F5",
         textSecondary: "#A3A3A3",
+        // AAATOAHH Brand Colors
+        brandBlack: "#020202",
+        brandNavy: "#070C18",
+        brandNavyLight: "#0F172A",
+        brandLime: "#A3E635",
+        brandLimeDark: "#84CC16",
+        brandOrange: "#FB923C",
+        brandOrangeDark: "#EA580C",
+        brandWhite: "#FFFFFF",
         // SaaS Admin Palette
         "saas-primary": "#6366F1",
         "saas-secondary": "#8B5CF6",
@@ -26,6 +35,8 @@ const config: Config = {
       fontFamily: {
         serif: ['"Playfair Display"', 'serif'],
         sans: ['Inter', 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'sans-serif'],
+        montserrat: ['var(--font-montserrat)', 'sans-serif'],
       },
     },
   },
