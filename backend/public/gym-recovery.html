@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAATOAHH.IN | Gym recovery & mobility brand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBlack: "#020202",
+                        brandNavy: "#070C18",
+                        brandLime: "#A3E635",
+                        brandLimeDark: "#84CC16",
+                        textSecondary: "#A3A3A3",
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #020202;
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #A3E635, #FFFFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-glow {
+            position: absolute;
+            top: -10%;
+            right: 10%;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(163, 230, 53, 0.04);
+            filter: blur(160px);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brandLime selection:text-black overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="py-6 px-4 border-b border-white/5 bg-brandBlack/80 backdrop-blur-md sticky top-0 z-30">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <span class="text-xl md:text-2xl font-montserrat font-black tracking-tighter text-white">
+                AAATOAHH<span class="text-brandLime">.IN</span>
+            </span>
+            <span class="text-xs font-montserrat font-bold bg-brandLime/10 text-brandLime px-3 py-1 rounded-full border border-brandLime/20">
+                ATHLETIC MOBILE RECOVERY
+            </span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-24 px-4 md:py-32 bg-gradient-to-b from-brandNavy to-brandBlack overflow-hidden">
+        <div class="hero-glow"></div>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+            
+            <!-- Hero Left -->
+            <div class="md:col-span-7 space-y-6 text-left">
+                <span class="text-xs font-montserrat font-extrabold uppercase tracking-widest text-brandLime bg-brandLime/10 px-3.5 py-1.5 rounded-full">
+                    ⚡ ATHLETE PERFORMANCE RECOVERY
+                </span>
+                <h1 class="text-4xl md:text-6xl font-poppins font-extrabold text-white leading-tight tracking-tight">
+                    Your Muscles Are <br class="hidden md:inline" />
+                    <span class="text-gradient">Not Recovering.</span>
+                </h1>
+                <p class="text-textSecondary text-base md:text-xl font-light leading-relaxed max-w-xl">
+                    Hard gym workouts create physical micro-tears, chronic inflammation, and deep lactic pooling. Traditional spa massages don’t target physical performance points. Get certified athletic decompression, stretch, and deep tissue release in your own space.
+                </p>
+
+                <!-- Bullet Benefits -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-check-circle text-brandLime text-lg"></i>
+                        <span class="text-sm font-poppins font-medium text-white/90">Accelerates Muscle Flush Rate</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-check-circle text-brandLime text-lg"></i>
+                        <span class="text-sm font-poppins font-medium text-white/90">Restores Full Kinetic Range</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-check-circle text-brandLime text-lg"></i>
+                        <span class="text-sm font-poppins font-medium text-white/90">Slashes Recovery Time by 50%</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-check-circle text-brandLime text-lg"></i>
+                        <span class="text-sm font-poppins font-medium text-white/90">Background-Verified Sports Coaches</span>
+                    </div>
+                </div>
+
+                <!-- Offer Highlight Box -->
+                <div class="p-5 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-4 max-w-lg mt-6">
+                    <div class="w-12 h-12 rounded-xl bg-brandLime/10 flex items-center justify-center text-brandLime text-xl">
+                        ⚡
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-poppins font-bold text-white">Free Recovery Demo</h4>
+                        <p class="text-xs text-textSecondary mt-0.5">Claim your <span class="text-brandLime font-semibold">FREE 10-Minute Home Recovery Assessment & Demo Slot</span>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Right Form -->
+            <div id="lead-form-section" class="md:col-span-5 relative">
+                <div class="absolute inset-0 bg-brandLime/10 rounded-[32px] blur-3xl pointer-events-none"></div>
+                <div class="bg-[#070c18]/80 backdrop-blur-xl border border-white/10 p-8 rounded-3xl relative z-10 shadow-[0_0_50px_rgba(7,12,24,0.8)]">
+                    <h3 class="text-2xl font-poppins font-black text-white tracking-tight">Claim Your Free Demo</h3>
+                    <p class="text-xs text-textSecondary mt-1 leading-relaxed">Fill out your details to schedule a FREE 10-minute in-home recovery slot.</p>
+                    
+                    <form id="funnel-lead-form" class="space-y-4 mt-6">
+                        <input type="hidden" name="concern" value="Athletic soreness, lactic accumulation, and muscular stiffness">
+                        <div>
+                            <label class="block text-[11px] font-montserrat font-bold text-textSecondary uppercase tracking-widest mb-1.5">Full Name</label>
+                            <input required type="text" name="name" class="w-full bg-brandBlack/60 border border-white/10 rounded-xl p-3 text-sm text-white focus:border-brandLime outline-none transition-all" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-montserrat font-bold text-textSecondary uppercase tracking-widest mb-1.5">Phone Number</label>
+                            <input required type="tel" name="phone" class="w-full bg-brandBlack/60 border border-white/10 rounded-xl p-3 text-sm text-white focus:border-brandLime outline-none transition-all" placeholder="+91 99999 99999">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-montserrat font-bold text-textSecondary uppercase tracking-widest mb-1.5">Your Area / Location</label>
+                            <input required type="text" name="location" class="w-full bg-brandBlack/60 border border-white/10 rounded-xl p-3 text-sm text-white focus:border-brandLime outline-none transition-all" placeholder="e.g. Salt Lake, Kolkata">
+                        </div>
+                        <button type="submit" class="w-full bg-brandLime text-black font-poppins font-black text-xs uppercase py-4 rounded-xl hover:bg-white hover:text-black transition-all mt-4 tracking-wider flex items-center justify-center gap-2">
+                            <span>CONFIRM DEMO SESSION</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Lead Magnet Image Showcase -->
+    <section class="py-16 px-4 bg-brandBlack">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-10">
+                <h3 class="text-xs font-montserrat font-bold text-brandLime uppercase tracking-wider">ELITE PERFORMANCE</h3>
+                <h2 class="text-2xl md:text-4xl font-poppins font-extrabold text-white mt-2">Targeted Athletic Recovery</h2>
+            </div>
+            <div class="relative h-[250px] md:h-[450px] w-full rounded-3xl overflow-hidden border border-white/10 group">
+                <img
+                    src="gym-recovery.png"
+                    alt="Premium athletic recovery session at home"
+                    class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-all duration-700 brightness-75"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-brandBlack via-transparent to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
+                    <div class="max-w-md">
+                        <span class="text-xs font-montserrat font-bold text-brandLime uppercase">ACTIVE LEAD MAGNET</span>
+                        <h4 class="text-lg md:text-xl font-poppins font-bold text-white mt-1">FREE 10-Minute Home Recovery Demo</h4>
+                        <p class="text-xs text-textSecondary mt-1">Experience direct physical relief on your stiff lower back, heavy hips, tight calves, and sore feet with our expert stretching and decompression.</p>
+                    </div>
+                    <button 
+                        onclick="document.getElementById('lead-form-section').scrollIntoView({ behavior: 'smooth' })"
+                        class="bg-brandLime text-black font-poppins font-bold text-xs uppercase px-5 py-3 rounded-xl hover:bg-white hover:text-black transition-all w-fit"
+                    >
+                        CLAIM FREE DEMO
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How we recharge kinetic lines -->
+    <section class="py-20 px-4 bg-[#030303] border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-xs font-montserrat font-bold uppercase tracking-widest text-brandLime">HOW WE ACCELERATE RECOVERY</span>
+                <h2 class="text-3xl md:text-5xl font-poppins font-extrabold text-white mt-4 tracking-tight">Kinetic & Muscular Restoration</h2>
+                <div class="w-16 h-1 bg-brandLime mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-[#070b16] border border-white/5 p-8 rounded-2xl hover:border-brandLime/20 transition-all group">
+                    <i class="fas fa-dumbbell text-4xl text-brandLime mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-poppins font-bold text-white mb-3">Flushes Lactic Acid</h3>
+                    <p class="text-textSecondary text-sm leading-relaxed font-light">
+                        Deep localized decompression pushes pooled lactic fluids back into core blood systems, melting post-workout fatigue in minutes.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-[#070b16] border border-white/5 p-8 rounded-2xl hover:border-brandLime/20 transition-all group">
+                    <i class="fas fa-arrows-left-right-to-line text-4xl text-brandLime mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-poppins font-bold text-white mb-3">Releases Fascial Glues</h3>
+                    <p class="text-textSecondary text-sm leading-relaxed font-light">
+                        Intense lifting causes muscular fascia to bind tightly. Our manual scraping and myofascial triggers unglue stiff restrictions.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-[#070b16] border border-white/5 p-8 rounded-2xl hover:border-brandLime/20 transition-all group">
+                    <i class="fas fa-person-running text-4xl text-brandLime mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-poppins font-bold text-white mb-3">Restores Range Of Motion</h3>
+                    <p class="text-textSecondary text-sm leading-relaxed font-light">
+                        Expert assisted passive stretching carefully expands deep joint ranges past protective guards, preparing muscles for next-day gains.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home service highlights -->
+    <section class="py-20 px-4 bg-brandBlack border-t border-white/5">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden border border-white/10">
+                <img
+                    src="hero-image-2.jpeg"
+                    alt="Athlete recovery at home"
+                    class="absolute inset-0 h-full w-full object-cover grayscale brightness-90"
+                />
+                <div class="absolute inset-0 bg-gradient-to-r from-brandBlack via-transparent to-transparent"></div>
+            </div>
+            <div class="space-y-6">
+                <span class="text-xs font-montserrat font-bold text-brandLime uppercase">ELITE CONVENIENCE</span>
+                <h2 class="text-3xl md:text-4xl font-poppins font-extrabold text-white tracking-tight">Professional Recovery Arrives at Your Doorstep</h2>
+                <p class="text-textSecondary text-sm leading-relaxed font-light">
+                    Commuting back from a fitness clinic post-workout forces muscles to remain locked and active.
+                </p>
+                <p class="text-textSecondary text-sm leading-relaxed font-light">
+                    AAATOAHH eliminates the travel friction. We arrive directly at your location, perform advanced passive stretching and deep percussive physical work on your couch, and leave you to rest in perfect relaxation.
+                </p>
+                <div class="flex gap-6 pt-4">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-home text-brandLime text-lg"></i>
+                        <span class="text-xs font-poppins font-bold uppercase text-white/90">100% In-Home Therapist Setup</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-clock text-brandLime text-lg"></i>
+                        <span class="text-xs font-poppins font-bold uppercase text-white/90">No Commute Required</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder story -->
+    <section class="py-20 px-4 bg-[#030303] border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-xs font-montserrat font-bold text-brandLime uppercase tracking-wider">OUR MISSION</h3>
+                <h2 class="text-2xl md:text-4xl font-poppins font-extrabold text-white mt-2">The AAATOAHH Story</h2>
+            </div>
+            <div class="space-y-6 text-textSecondary text-sm leading-relaxed font-light">
+                <p>
+                    Modern life has locked us in chairs. We sit at desks for 10 hours, push hard at gyms, and compress our bodies with stress. Over time, that built-up tightness stops being an inconvenience—it becomes a daily physical wall.
+                </p>
+                <p>
+                    I founded <strong class="text-white">AAATOAHH.IN</strong> because traditional salons are loud and clinical settings feel cold. Premium, deep physical recovery should belong in your home sanctuary—free from travel stress and waiting rooms.
+                </p>
+                <p class="text-white font-semibold">
+                    - Founder, AAATOAHH
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 px-4 bg-brandBlack border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-poppins font-extrabold text-white">Loved By Elite Athletes</h2>
+                <div class="w-12 h-0.5 bg-brandLime mx-auto mt-3"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-[#070b16] border border-white/5 p-8 rounded-2xl relative">
+                    <p class="text-textSecondary text-sm italic mb-6">"Between heavy squats and sprints, my hamstrings and hips were always tight. AAATOAHH's stretching therapist released my joints in 10 minutes. Incredible work."</p>
+                    <h4 class="text-white font-bold text-sm">- Rohit K., Competitive Powerlifter</h4>
+                </div>
+                <div class="bg-[#070b16] border border-white/5 p-8 rounded-2xl relative">
+                    <p class="text-textSecondary text-sm italic mb-6">"The best part is not driving back home after being completely loose. Absolute life-saver for my marathon training season."</p>
+                    <h4 class="text-white font-bold text-sm">- Priya M., Marathoner</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="py-20 px-4 bg-[#030303] border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-poppins font-extrabold text-white">Frequently Asked Questions</h2>
+                <div class="w-12 h-0.5 bg-brandLime mx-auto mt-3"></div>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-[#070b16] border border-white/5 p-6 rounded-xl cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-sm font-poppins font-bold text-white">Is this session fully obligation-free?</h4>
+                        <i class="fas fa-chevron-down text-brandLime transition-transform"></i>
+                    </div>
+                    <p class="text-textSecondary text-xs mt-3 leading-relaxed hidden">Yes! The 10-minute demo is entirely free and designed to let you experience the therapist's skill and pressure before deciding on a package.</p>
+                </div>
+                <div class="bg-[#070b16] border border-white/5 p-6 rounded-xl cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-sm font-poppins font-bold text-white">Are your therapists vetted?</h4>
+                        <i class="fas fa-chevron-down text-brandLime transition-transform"></i>
+                    </div>
+                    <p class="text-textSecondary text-xs mt-3 leading-relaxed hidden">All AAATOAHH specialists are background-verified, licensed physiotherapists or certified recovery coaches with 3+ years of clinical/luxury spa experience.</p>
+                </div>
+                <div class="bg-[#070b16] border border-white/5 p-6 rounded-xl cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-sm font-poppins font-bold text-white">Do I need to prepare anything?</h4>
+                        <i class="fas fa-chevron-down text-brandLime transition-transform"></i>
+                    </div>
+                    <p class="text-textSecondary text-xs mt-3 leading-relaxed hidden">Absolutely nothing. Our therapist arrives with sanitized massage tables, organic oils, high-end linens, and calming aromatherapies. Just lay down and rest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Call To Action -->
+    <section class="py-24 px-4 bg-gradient-to-t from-[#090b16] to-brandBlack text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-brandLime/5 blur-3xl pointer-events-none"></div>
+        <div class="max-w-3xl mx-auto relative z-10 space-y-6">
+            <h2 class="text-3xl md:text-5xl font-poppins font-extrabold text-white tracking-tight">Restore Your Kinetic Edge Today.</h2>
+            <p class="text-textSecondary text-sm md:text-base font-light max-w-xl mx-auto leading-relaxed">
+                Register for your free 10-minute home athletic recovery demonstration. Let an expert therapist calm your kinetic system in minutes.
+            </p>
+            <div class="pt-4">
+                <button
+                    onclick="document.getElementById('lead-form-section').scrollIntoView({ behavior: 'smooth' })"
+                    class="bg-brandLime text-black font-poppins font-black text-sm uppercase px-8 py-4 rounded-xl hover:bg-white hover:text-black transition-all shadow-[0_0_30px_rgba(163,230,53,0.3)] duration-300 transform active:scale-95 animate-bounce"
+                >
+                    BOOK YOUR FREE RECOVERY DEMO NOW
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Bottom Mobile CTA -->
+    <div id="sticky-cta-bar" class="fixed bottom-0 left-0 right-0 z-40 bg-brandBlack/95 border-t border-white/10 px-4 py-3 md:hidden translate-y-full transition-transform duration-300">
+        <button 
+            onclick="document.getElementById('lead-form-section').scrollIntoView({ behavior: 'smooth' })"
+            class="w-full bg-brandLime text-black font-poppins font-black text-xs uppercase py-3.5 rounded-xl hover:scale-[1.02] active:scale-95 transition-all shadow-[0_0_20px_rgba(163,230,53,0.3)]"
+        >
+            BOOK FREE RECOVERY DEMO
+        </button>
+    </div>
+
+    <!-- Floating WhatsApp and Call -->
+    <div class="fixed bottom-20 right-4 z-40 flex flex-col gap-3">
+        <!-- Call Support -->
+        <a 
+            href="tel:+917908082151" 
+            class="w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all"
+        >
+            <i class="fas fa-phone text-lg"></i>
+        </a>
+        <!-- WhatsApp -->
+        <a 
+            href="https://wa.me/917908082151?text=Hi!%20I%20want%20to%20book%20a%20FREE%20Gym%20Recovery%20Demo%20session." 
+            target="_blank" 
+            class="w-12 h-12 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all relative"
+        >
+            <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-75 animate-ping pointer-events-none"></span>
+            <i class="fab fa-whatsapp text-2xl relative z-10"></i>
+        </a>
+    </div>
+
+    <!-- Footer minimal -->
+    <footer class="py-8 bg-brandBlack text-center text-textSecondary text-xs border-t border-white/5">
+        <p>&copy; 2026 AAATOAHH.IN. Elite Home Mobility & Recovery Support. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Toggle FAQ Accordion
+        function toggleFaq(el) {
+            const p = el.querySelector('p');
+            const icon = el.querySelector('i');
+            p.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Handle Sticky Mobile CTA appearance
+        window.addEventListener('scroll', () => {
+            const bar = document.getElementById('sticky-cta-bar');
+            if (window.scrollY > 400) {
+                bar.classList.remove('translate-y-full');
+            } else {
+                bar.classList.add('translate-y-full');
+            }
+        });
+
+        // Form submission simulated save to Supabase / Redirect
+        const form = document.getElementById('funnel-lead-form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                phone: formData.get('phone'),
+                location: formData.get('location'),
+                concern: formData.get('concern'),
+                bookedAt: new Date().toISOString()
+            };
+
+            // Save to LocalStorage logs
+            const existingLeads = JSON.parse(localStorage.getItem('funnel_leads') || '[]');
+            existingLeads.push(data);
+            localStorage.setItem('funnel_leads', JSON.stringify(existingLeads));
+
+            // Redirect to Thank You Page
+            window.location.href = '/thank-you-gym-recovery';
+        });
+    </script>
+
+</body>
+</html>

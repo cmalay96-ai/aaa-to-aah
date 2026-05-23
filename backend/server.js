@@ -22,6 +22,50 @@ app.use('/api/saas/orders', require('./routes/saasOrders'));
 // Serve static assets from the public directory (images, pdfs, etc.)
 app.use(express.static(path.join(__dirname, 'public')));
 
+// --- AAATOAHH.IN Funnel Routes ---
+
+// 1. Gym Recovery
+app.get('/gym-recovery', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/gym-recovery.html'));
+});
+app.get('/thank-you-gym-recovery', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/thank-you-gym-recovery.html'));
+});
+
+// 2. Leg Recovery
+app.get('/leg-recovery', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/leg-recovery.html'));
+});
+app.get('/thank-you-leg-recovery', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/thank-you-leg-recovery.html'));
+});
+
+// 3. Joint Pain Relief
+app.get('/joint-pain-relief', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/joint-pain-relief.html'));
+});
+app.get('/thank-you-joint-pain', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/thank-you-joint-pain.html'));
+});
+
+// 4. Parents Pain Care
+app.get('/parents-pain-care', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/parents-pain-care.html'));
+});
+app.get('/thank-you-parents-care', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/thank-you-parents-care.html'));
+});
+
+// 5. Sleep Relaxation
+app.get('/sleep-relaxation', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/sleep-relaxation.html'));
+});
+app.get('/thank-you-sleep-relaxation', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/thank-you-sleep-relaxation.html'));
+});
+
+// ---------------------------------
+
 // Serve the index.html landing page at the root route
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
