@@ -18,17 +18,24 @@ body {
   /* Headings: Extra bold deep premium sea green for maximum impression and clarity */
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif text-primary font-extrabold tracking-tight;
-    color: #0A4D3C !important;
+    color: #0A4D3C;
   }
   
   h1 {
-    color: #05261E !important; /* Ultra-deep forest green for the absolute highest contrast */
+    color: #05261E; /* Ultra-deep forest green for the absolute highest contrast */
     text-shadow: 0 1px 2px rgba(10, 77, 60, 0.04);
+  }
+
+  /* Luxury Champagne Gold highlights inside headings for high visual impression */
+  h1 span, h2 span, h3 span, h4 span, .highlight-gold {
+    color: #967446 !important; /* Rich therapeutic champagne gold */
+    font-style: italic !important;
   }
 
   /* Body copy mid-tone green-gray for highly comfortable, premium readability */
   p, li, label {
     @apply text-textSecondary font-medium;
+    color: #3D544E !important;
   }
 }
 

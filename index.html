@@ -29,6 +29,7 @@
         }
     </script>
     
+    
     <style>
         /* Base typography color for wellness light theme */
         body, p, li, label, td, th {
@@ -38,7 +39,7 @@
         
         /* HEADLINES: Make them stand out extremely bold, premium, and deep green! */
         h1, h2, h3, h4, h5, h6, .font-serif {
-            color: #0A4D3C !important; /* Deep signature premium sea green */
+            color: #0A4D3C; /* Deep signature premium sea green (No !important to allow nested overrides) */
             font-family: 'Playfair Display', serif !important;
             font-weight: 800 !important;
             letter-spacing: -0.01em !important;
@@ -46,8 +47,14 @@
         
         /* Specific page titles: give them ultimate premium contrast */
         h1 {
-            color: #05261E !important; /* Ultra-deep forest green for the absolute best impression */
+            color: #05261E; /* Ultra-deep forest green for the absolute best impression (No !important to allow span color) */
             text-shadow: 0 1px 2px rgba(10, 77, 60, 0.05) !important;
+        }
+
+        /* Luxury Champagne Gold highlights inside headings for high visual impression */
+        h1 span, h2 span, h3 span, h4 span, .highlight-gold {
+            color: #967446 !important; /* Rich therapeutic champagne gold */
+            font-style: italic !important;
         }
 
         /* TEXT GRADIENT class */
@@ -725,5 +732,6 @@
     </script>
 </body>
 </html>
+
 
 
