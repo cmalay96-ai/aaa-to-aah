@@ -69,21 +69,19 @@ export default function LeadForm({ painPointDefault, redirectUrl, themeColor, se
     }
   };
 
-  const accentColor = themeColor === "lime" ? "text-brandLime border-brandLime/30 focus:border-brandLime" : "text-brandOrange border-brandOrange/30 focus:border-brandOrange";
-  const btnColor = themeColor === "lime" 
-    ? "bg-brandLime text-black hover:bg-white hover:text-black shadow-[0_0_20px_rgba(163,230,53,0.4)]" 
-    : "bg-brandOrange text-white hover:bg-white hover:text-black shadow-[0_0_20px_rgba(251,146,60,0.4)]";
-  const focusRing = themeColor === "lime" ? "focus:ring-brandLime/20" : "focus:ring-brandOrange/20";
+  const accentColor = "text-primary border-primary/20 focus:border-primary";
+  const btnColor = "bg-primary text-white hover:bg-[#07362a] shadow-[0_10px_20px_-5px_rgba(10,77,60,0.3)]";
+  const focusRing = "focus:ring-primary/15";
 
   return (
-    <div className="w-full bg-[#0a0f1d]/90 backdrop-blur-md border border-white/5 rounded-3xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
+    <div className="w-full bg-white/90 backdrop-blur-md border border-primary/10 rounded-3xl p-6 md:p-8 shadow-xl relative overflow-hidden">
       {/* Background gradients for premium glass effect */}
-      <div className={`absolute -top-24 -left-24 w-48 h-48 rounded-full blur-[100px] opacity-20 ${themeColor === "lime" ? "bg-brandLime" : "bg-brandOrange"}`} />
+      <div className="absolute -top-24 -left-24 w-48 h-48 rounded-full blur-[100px] opacity-10 bg-primary" />
       
       {success ? (
         <div className="flex flex-col items-center justify-center py-12 text-center">
-          <FaCheckCircle className={`text-6xl mb-4 animate-bounce ${themeColor === "lime" ? "text-brandLime" : "text-brandOrange"}`} />
-          <h3 className="text-2xl font-poppins font-bold text-white mb-2">Lead Registered!</h3>
+          <FaCheckCircle className="text-6xl mb-4 animate-bounce text-primary" />
+          <h3 className="text-2xl font-poppins font-bold text-textPrimary mb-2">Lead Registered!</h3>
           <p className="text-textSecondary text-sm max-w-xs">
             Redirecting you to your matching demo confirmation page...
           </p>
@@ -91,27 +89,27 @@ export default function LeadForm({ painPointDefault, redirectUrl, themeColor, se
       ) : (
         <form onSubmit={handleSubmit} className="space-y-5 relative z-10">
           <div className="text-center mb-6">
-            <span className={`text-xs font-montserrat font-semibold uppercase tracking-widest px-3 py-1 rounded-full bg-white/5 ${themeColor === "lime" ? "text-brandLime" : "text-brandOrange"}`}>
+            <span className="text-xs font-montserrat font-semibold uppercase tracking-widest px-3 py-1 rounded-full bg-primary/5 text-primary">
               100% Free Demo Session
             </span>
-            <h3 className="text-xl font-poppins font-bold text-white mt-3">Book Your Recovery Demo</h3>
+            <h3 className="text-xl font-poppins font-bold text-textPrimary mt-3">Book Your Recovery Demo</h3>
             <p className="text-textSecondary text-xs mt-1">Fill out this quick form. No payment required.</p>
           </div>
 
           <div>
-            <label className="block text-xs font-montserrat text-textSecondary mb-2 font-medium">YOUR NAME</label>
+            <label className="block text-xs font-montserrat text-textSecondary mb-2 font-semibold">YOUR NAME</label>
             <input
               type="text"
               required
               placeholder="e.g. John Doe"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className={`w-full bg-black/60 border rounded-xl p-4 text-sm text-white focus:ring-2 outline-none transition-all ${accentColor} ${focusRing}`}
+              className={`w-full bg-white/70 border rounded-xl p-4 text-sm text-textPrimary focus:ring-2 outline-none transition-all ${accentColor} ${focusRing}`}
             />
           </div>
 
           <div>
-            <label className="block text-xs font-montserrat text-textSecondary mb-2 font-medium">PHONE NUMBER</label>
+            <label className="block text-xs font-montserrat text-textSecondary mb-2 font-semibold">PHONE NUMBER</label>
             <input
               type="tel"
               required
@@ -119,31 +117,31 @@ export default function LeadForm({ painPointDefault, redirectUrl, themeColor, se
               placeholder="e.g. 9876543210"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className={`w-full bg-black/60 border rounded-xl p-4 text-sm text-white focus:ring-2 outline-none transition-all ${accentColor} ${focusRing}`}
+              className={`w-full bg-white/70 border rounded-xl p-4 text-sm text-textPrimary focus:ring-2 outline-none transition-all ${accentColor} ${focusRing}`}
             />
-            <span className="text-[10px] text-textSecondary/60 mt-1 block">Enter 10-digit mobile number</span>
+            <span className="text-[10px] text-textSecondary mt-1 block font-medium">Enter 10-digit mobile number</span>
           </div>
 
           <div>
-            <label className="block text-xs font-montserrat text-textSecondary mb-2 font-medium">AREA / LOCATION</label>
+            <label className="block text-xs font-montserrat text-textSecondary mb-2 font-semibold">AREA / LOCATION</label>
             <input
               type="text"
               required
               placeholder="e.g. Bandra West, Mumbai"
               value={formData.location}
               onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-              className={`w-full bg-black/60 border rounded-xl p-4 text-sm text-white focus:ring-2 outline-none transition-all ${accentColor} ${focusRing}`}
+              className={`w-full bg-white/70 border rounded-xl p-4 text-sm text-textPrimary focus:ring-2 outline-none transition-all ${accentColor} ${focusRing}`}
             />
           </div>
 
           <div>
-            <label className="block text-xs font-montserrat text-textSecondary mb-2 font-medium">YOUR CONCERN / PAIN POINT</label>
+            <label className="block text-xs font-montserrat text-textSecondary mb-2 font-semibold">YOUR CONCERN / PAIN POINT</label>
             <input
               type="text"
               required
               value={formData.problem}
               onChange={(e) => setFormData({ ...formData, problem: e.target.value })}
-              className={`w-full bg-black/60 border rounded-xl p-4 text-sm text-white focus:ring-2 outline-none transition-all ${accentColor} ${focusRing}`}
+              className={`w-full bg-white/70 border rounded-xl p-4 text-sm text-textPrimary focus:ring-2 outline-none transition-all ${accentColor} ${focusRing}`}
             />
           </div>
 
@@ -162,7 +160,7 @@ export default function LeadForm({ painPointDefault, redirectUrl, themeColor, se
             )}
           </button>
 
-          <p className="text-[10px] text-textSecondary/50 text-center mt-3">
+          <p className="text-[10px] text-textSecondary/80 text-center mt-3 font-medium">
             🔒 Your data is fully secure. We never spam.
           </p>
         </form>

@@ -109,18 +109,18 @@ export default function BookSession() {
     <div className="min-h-screen pt-24 pb-12 px-4">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-serif text-white mb-4">Book Your Session</h1>
-          <p className="text-textSecondary">Select your service, date, and time to relax at home.</p>
+          <h1 className="text-4xl font-serif text-textPrimary mb-4">Book Your Session</h1>
+          <p className="text-textSecondary font-medium">Select your service, date, and time to relax at home.</p>
         </div>
 
         {/* Progress Bar */}
         <div className="flex justify-between items-center mb-12 relative">
-          <div className="absolute left-0 top-1/2 w-full h-0.5 bg-surface -z-10"></div>
+          <div className="absolute left-0 top-1/2 w-full h-0.5 bg-secondary -z-10"></div>
           {[1, 2, 3, 4].map((num) => (
             <div 
               key={num} 
               className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                step >= num ? 'bg-primary text-black' : 'bg-surface text-textSecondary'
+                step >= num ? 'bg-primary text-white shadow-md' : 'bg-white border border-primary/20 text-textSecondary'
               }`}
             >
               {step > num ? <FaCheckCircle /> : num}
@@ -128,27 +128,27 @@ export default function BookSession() {
           ))}
         </div>
 
-        <div className="bg-surface rounded-2xl p-8 border border-primary/20">
+        <div className="bg-surface rounded-2xl p-8 border border-primary/10 shadow-lg">
           
           {step === 1 && (
             <div className="space-y-6 animate-fade-in">
-              <h2 className="text-2xl font-serif text-white mb-6">Select a Service</h2>
+              <h2 className="text-2xl font-serif text-textPrimary mb-6">Select a Service</h2>
               {SERVICES.map(service => (
                 <div 
                   key={service.id}
                   onClick={() => { setSelectedService(service); setStep(2); }}
                   className={`p-6 rounded-xl border cursor-pointer transition-all ${
-                    selectedService.id === service.id ? 'border-primary bg-primary/10' : 'border-white/10 hover:border-primary/50'
+                    selectedService.id === service.id ? 'border-primary bg-primary/5' : 'border-primary/10 hover:border-primary/50 bg-white/50'
                   }`}
                 >
                   <div className="flex justify-between items-center">
                     <div>
-                      <h3 className="text-xl text-white font-medium mb-2">{service.name}</h3>
-                      <p className="text-textSecondary flex items-center gap-2">
+                      <h3 className="text-xl text-textPrimary font-bold mb-2">{service.name}</h3>
+                      <p className="text-textSecondary flex items-center gap-2 font-medium">
                         <FaClock /> {service.duration}
                       </p>
                     </div>
-                    <div className="text-2xl text-primary font-serif">₹{service.price}</div>
+                    <div className="text-2xl text-primary font-serif font-bold">₹{service.price}</div>
                   </div>
                 </div>
               ))}
@@ -158,24 +158,24 @@ export default function BookSession() {
           {step === 2 && (
             <div className="animate-fade-in">
               <div className="flex items-center gap-4 mb-6">
-                <button onClick={() => setStep(1)} className="text-textSecondary hover:text-white">&larr; Back</button>
-                <h2 className="text-2xl font-serif text-white">Select a Date</h2>
+                <button onClick={() => setStep(1)} className="text-textSecondary hover:text-primary font-semibold">&larr; Back</button>
+                <h2 className="text-2xl font-serif text-textPrimary">Select a Date</h2>
               </div>
               
-              <div className="bg-black/50 rounded-2xl p-6 border border-white/10">
+              <div className="bg-secondary/40 rounded-2xl p-6 border border-primary/10">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl text-white font-serif">{format(currentMonth, 'MMMM yyyy')}</h3>
+                  <h3 className="text-xl text-textPrimary font-serif font-semibold">{format(currentMonth, 'MMMM yyyy')}</h3>
                   <div className="flex gap-2">
                     <button 
                       onClick={() => setCurrentMonth(subMonths(currentMonth, 1))}
                       disabled={isBefore(currentMonth, startOfMonth(startOfToday()))}
-                      className="p-3 rounded-full hover:bg-white/10 text-white disabled:opacity-30 disabled:hover:bg-transparent transition-colors"
+                      className="p-3 rounded-full hover:bg-primary/10 text-primary disabled:opacity-30 disabled:hover:bg-transparent transition-colors"
                     >
                       <FaChevronLeft />
                     </button>
                     <button 
                       onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}
-                      className="p-3 rounded-full hover:bg-white/10 text-white transition-colors"
+                      className="p-3 rounded-full hover:bg-primary/10 text-primary transition-colors"
                     >
                       <FaChevronRight />
                     </button>
@@ -184,7 +184,7 @@ export default function BookSession() {
 
                 <div className="grid grid-cols-7 gap-1 md:gap-2 mb-2">
                   {['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'].map(day => (
-                    <div key={day} className="text-center text-sm font-medium text-textSecondary py-2">
+                    <div key={day} className="text-center text-sm font-semibold text-textSecondary py-2">
                       {day}
                     </div>
                   ))}
@@ -205,11 +205,11 @@ export default function BookSession() {
                         className={`
                           aspect-square rounded-xl flex items-center justify-center text-sm transition-all
                           ${!isCurrentMonth ? 'invisible' : ''}
-                          ${isPast && isCurrentMonth ? 'text-white/20 cursor-not-allowed' : ''}
-                          ${!isPast && isCurrentMonth ? 'hover:border-primary hover:bg-primary/10 cursor-pointer border border-transparent' : ''}
-                          ${isSelected ? 'bg-primary text-black font-bold border-primary' : 'text-white'}
-                          ${isToday && !isSelected ? 'border-primary/50 text-primary border' : ''}
-                          ${!isPast && !isSelected && isCurrentMonth ? 'bg-surface' : ''}
+                          ${isPast && isCurrentMonth ? 'text-textSecondary/20 cursor-not-allowed' : ''}
+                          ${!isPast && isCurrentMonth ? 'hover:border-primary hover:bg-primary/10 cursor-pointer border border-transparent font-medium' : ''}
+                          ${isSelected ? 'bg-primary text-white font-bold border-primary shadow-sm' : 'text-textPrimary'}
+                          ${isToday && !isSelected ? 'border-primary/50 text-primary border font-bold' : ''}
+                          ${!isPast && !isSelected && isCurrentMonth ? 'bg-white shadow-sm' : ''}
                         `}
                       >
                         {format(day, 'd')}
@@ -224,12 +224,12 @@ export default function BookSession() {
           {step === 3 && (
             <div className="animate-fade-in">
               <div className="flex items-center gap-4 mb-6">
-                <button onClick={() => setStep(2)} className="text-textSecondary hover:text-white">&larr; Back</button>
-                <h2 className="text-2xl font-serif text-white">Select a Time</h2>
+                <button onClick={() => setStep(2)} className="text-textSecondary hover:text-primary font-semibold">&larr; Back</button>
+                <h2 className="text-2xl font-serif text-textPrimary font-bold">Select a Time</h2>
               </div>
 
               {loading ? (
-                <div className="text-center py-12 text-primary">Loading available slots...</div>
+                <div className="text-center py-12 text-primary font-bold">Loading available slots...</div>
               ) : (
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {TIME_SLOTS.map((slot, i) => {
@@ -239,14 +239,14 @@ export default function BookSession() {
                         key={i}
                         disabled={isBooked}
                         onClick={() => { setSelectedSlot(slot); setStep(4); }}
-                        className={`py-4 rounded-xl font-medium transition-all ${
+                        className={`py-4 rounded-xl font-bold transition-all ${
                           isBooked 
-                            ? 'bg-black border border-white/5 text-white/20 cursor-not-allowed' 
-                            : 'bg-surface border border-white/20 text-white hover:border-primary hover:bg-primary/10'
+                            ? 'bg-secondary border border-primary/5 text-textSecondary/30 cursor-not-allowed' 
+                            : 'bg-white border border-primary/20 text-textPrimary hover:border-primary hover:bg-primary/10 shadow-sm'
                         }`}
                       >
                         {slot}
-                        {isBooked && <span className="block text-xs mt-1 text-red-400">Booked</span>}
+                        {isBooked && <span className="block text-xs mt-1 text-red-500 font-semibold">Booked</span>}
                       </button>
                     );
                   })}
@@ -258,35 +258,35 @@ export default function BookSession() {
           {step === 4 && (
             <div className="animate-fade-in">
               <div className="flex items-center gap-4 mb-6">
-                <button onClick={() => setStep(3)} className="text-textSecondary hover:text-white">&larr; Back</button>
-                <h2 className="text-2xl font-serif text-white">Your Details</h2>
+                <button onClick={() => setStep(3)} className="text-textSecondary hover:text-primary font-semibold">&larr; Back</button>
+                <h2 className="text-2xl font-serif text-textPrimary font-bold">Your Details</h2>
               </div>
 
-              <div className="mb-8 p-4 bg-black rounded-lg border border-primary/20">
-                <h3 className="text-primary font-medium mb-2">Booking Summary</h3>
-                <p className="text-white text-sm">{selectedService.name} ({selectedService.duration})</p>
-                <p className="text-textSecondary text-sm">
+              <div className="mb-8 p-6 bg-secondary/50 rounded-xl border border-primary/10 shadow-inner">
+                <h3 className="text-primary font-bold mb-2">Booking Summary</h3>
+                <p className="text-textPrimary text-sm font-bold">{selectedService.name} ({selectedService.duration})</p>
+                <p className="text-textSecondary text-sm font-medium mt-1">
                   {selectedDate && format(selectedDate, 'MMMM d, yyyy')} at {selectedSlot}
                 </p>
-                <p className="text-primary font-serif text-xl mt-2">₹{selectedService.price}</p>
+                <p className="text-primary font-serif text-2xl font-bold mt-3">₹{selectedService.price}</p>
               </div>
 
               <form onSubmit={handleBookingSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-sm text-textSecondary mb-1">Full Name</label>
-                  <input required type="text" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="w-full bg-black border border-white/20 rounded-lg p-3 text-white focus:border-primary focus:outline-none" />
+                  <label className="block text-sm text-textSecondary mb-1 font-semibold">Full Name</label>
+                  <input required type="text" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="w-full bg-white border border-primary/20 rounded-lg p-3 text-textPrimary focus:border-primary focus:outline-none" />
                 </div>
                 <div>
-                  <label className="block text-sm text-textSecondary mb-1">Phone Number</label>
-                  <input required type="tel" value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} className="w-full bg-black border border-white/20 rounded-lg p-3 text-white focus:border-primary focus:outline-none" />
+                  <label className="block text-sm text-textSecondary mb-1 font-semibold">Phone Number</label>
+                  <input required type="tel" value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} className="w-full bg-white border border-primary/20 rounded-lg p-3 text-textPrimary focus:border-primary focus:outline-none" />
                 </div>
                 <div>
-                  <label className="block text-sm text-textSecondary mb-1">Full Home Address</label>
-                  <textarea required value={formData.address} onChange={e => setFormData({...formData, address: e.target.value})} className="w-full bg-black border border-white/20 rounded-lg p-3 text-white focus:border-primary focus:outline-none h-24"></textarea>
+                  <label className="block text-sm text-textSecondary mb-1 font-semibold">Full Home Address</label>
+                  <textarea required value={formData.address} onChange={e => setFormData({...formData, address: e.target.value})} className="w-full bg-white border border-primary/20 rounded-lg p-3 text-textPrimary focus:border-primary focus:outline-none h-24"></textarea>
                 </div>
                 
-                <button type="submit" className="w-full bg-primary text-black font-bold py-4 rounded-xl hover:bg-white transition-colors mt-6">
-                  Proceed to Payment
+                <button type="submit" className="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-[#07362a] transition-all transform active:scale-95 shadow-[0_10px_20px_-5px_rgba(10,77,60,0.3)] mt-6">
+                  Proceed to Confirm
                 </button>
               </form>
             </div>
@@ -295,11 +295,11 @@ export default function BookSession() {
           {step === 5 && (
             <div className="text-center animate-fade-in py-12">
               <FaCheckCircle className="text-6xl text-primary mx-auto mb-6" />
-              <h2 className="text-3xl font-serif text-white mb-4">Booking Confirmed!</h2>
-              <p className="text-textSecondary mb-8 max-w-md mx-auto">
+              <h2 className="text-3xl font-serif text-textPrimary mb-4">Booking Confirmed!</h2>
+              <p className="text-textSecondary mb-8 max-w-md mx-auto font-medium">
                 Your massage session for {selectedDate && format(selectedDate, 'MMMM d')} at {selectedSlot} has been successfully booked. Our therapist will arrive at your location.
               </p>
-              <button onClick={() => window.location.href='/'} className="bg-surface border border-primary text-primary px-8 py-3 rounded-full hover:bg-primary hover:text-black transition-colors">
+              <button onClick={() => window.location.href='/'} className="bg-white border border-primary text-primary px-8 py-3 rounded-full hover:bg-primary hover:text-white font-bold transition-colors">
                 Return to Home
               </button>
             </div>

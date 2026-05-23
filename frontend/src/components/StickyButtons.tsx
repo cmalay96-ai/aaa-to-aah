@@ -39,9 +39,7 @@ export default function StickyButtons({
     }
   };
 
-  const ctaBtnColor = accentColor === "lime" 
-    ? "bg-brandLime text-black font-extrabold hover:bg-white transition-all shadow-[0_0_15px_rgba(163,230,53,0.4)]" 
-    : "bg-brandOrange text-white font-extrabold hover:bg-white hover:text-black transition-all shadow-[0_0_15px_rgba(251,146,60,0.4)]";
+  const ctaBtnColor = "bg-primary text-white font-extrabold hover:bg-[#07362a] transition-all shadow-[0_4px_15px_rgba(10,77,60,0.3)]";
 
   return (
     <>
@@ -70,7 +68,7 @@ export default function StickyButtons({
 
       {/* 2. Mobile-First Bottom Sticky CTA Bar (Shows on scroll on mobile screens) */}
       <div
-        className={`fixed bottom-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-md border-t border-white/10 px-4 py-3 md:hidden transition-all duration-500 transform ${
+        className={`fixed bottom-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-t border-primary/10 px-4 py-3 md:hidden transition-all duration-500 transform ${
           isVisible ? "translate-y-0" : "translate-y-full"
         }`}
       >

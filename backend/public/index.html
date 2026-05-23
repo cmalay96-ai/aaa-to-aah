@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -13,12 +13,12 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#D4AF37",
-                        secondary: "#1A1A1A",
-                        background: "#0A0A0A",
-                        surface: "#111111",
-                        textPrimary: "#F5F5F5",
-                        textSecondary: "#A3A3A3",
+                        primary: "#0A4D3C",
+                        secondary: "#EAF4F0",
+                        background: "#FAFDFC",
+                        surface: "#FFFFFF",
+                        textPrimary: "#1B332D",
+                        textSecondary: "#4A635C",
                     },
                     fontFamily: {
                         serif: ['"Playfair Display"', 'serif'],
@@ -30,25 +30,56 @@
     </script>
     <style>
         body {
-            background-color: #0A0A0A;
-            color: #F5F5F5;
+            background-color: #FAFDFC;`n            color: #1B332D;
+            color: #1B332D;
             font-family: 'Inter', sans-serif;
         }
         h1, h2, h3, h4, h5, h6, .font-serif {
             font-family: '"Playfair Display"', serif;
         }
         .hero-bg {
-            background-color: #0A0A0A;
-            background-image: linear-gradient(to bottom, rgba(10,10,10,0.3), rgba(10,10,10,0.7)), url('hero%20image%202.jpeg');
+            background-color: #FAFDFC;`n            color: #1B332D;
+            background-image: linear-gradient(to bottom, rgba(234, 244, 240, 0.4), rgba(250, 253, 252, 0.8)), url('hero%20image%202.jpeg');
             background-size: cover;
             background-position: top center;
+        }
+    </style>
+
+    <style>
+        body, h1, h2, h3, h4, h5, h6, p, span:not(.bg-primary):not(.no-dark), li, label {
+            color: #1B332D !important;
+        }
+        .text-white {
+            color: #1B332D !important;
+        }
+        .text-white\/90 {
+            color: rgba(27, 51, 45, 0.9) !important;
+        }
+        .text-textSecondary {
+            color: #4A635C !important;
+        }
+        button, .bg-primary, .bg-primary *, button *, a.bg-[#25D366], a.bg-[#25D366] *, a.bg-blue-600, a.bg-blue-600 * {
+            color: #FFFFFF !important;
+        }
+        .bg-primary {
+            background-color: #0A4D3C !important;
+        }
+        .hover\:bg-white:hover {
+            background-color: #07362a !important;
+            color: #FFFFFF !important;
+        }
+        .text-primary {
+            color: #0A4D3C !important;
+        }
+        .shadow-\[0_0_30px_rgba\(212\,175\,55\,0\.4\)\] {
+            box-shadow: 0 10px 25px -5px rgba(10, 77, 60, 0.3) !important;
         }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-background/80 border-b border-white/10 px-6 py-4 flex justify-between items-center">
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-white/80 border-b border-primary/10 px-6 py-4 flex justify-between items-center">
         <img src="logo.png" alt="AAA TO AHH.IN Logo" class="h-10 w-auto object-contain">
         <div class="hidden md:flex space-x-8 text-sm tracking-wide">
             <a href="#" class="text-white hover:text-primary transition-colors">Home</a>
@@ -79,7 +110,7 @@
     </section>
 
     <!-- Trust Section -->
-    <section class="py-12 bg-[#0d0d0d] border-y border-white/5 relative z-10">
+    <section class="py-12 bg-secondary/30 border-y border-primary/10 border-y border-primary/10 relative z-10">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-wrap justify-center gap-8 md:gap-16">
                 <!-- Trust Item 1 -->
@@ -150,7 +181,7 @@
                     <i class="fas fa-spa text-4xl text-primary mb-6"></i>
                     <h3 class="text-2xl font-serif mb-3">Head Massage for Stress Relief</h3>
                     <p class="text-textSecondary mb-6 line-clamp-2">Targeted therapy to release tension in the head, neck, and shoulders. Perfect for relieving modern stress and headaches.</p>
-                    <div class="flex justify-between items-center border-t border-white/10 pt-4 mt-auto">
+                    <div class="flex justify-between items-center border-t border-primary/10 pt-4 mt-auto">
                         <span class="text-lg font-serif">45 Min | ₹350</span>
                         <span class="text-primary group-hover:text-white transition-colors">Book &rarr;</span>
                     </div>
@@ -161,7 +192,7 @@
                     <i class="fas fa-leaf text-4xl text-primary mb-6"></i>
                     <h3 class="text-2xl font-serif mb-3">Full Body Fitness Recovery</h3>
                     <p class="text-textSecondary mb-6 line-clamp-2">Deep tissue and sports massage techniques to accelerate muscle recovery and improve flexibility.</p>
-                    <div class="flex justify-between items-center border-t border-white/10 pt-4 mt-auto">
+                    <div class="flex justify-between items-center border-t border-primary/10 pt-4 mt-auto">
                         <span class="text-lg font-serif">90 Min | ₹500</span>
                         <span class="text-primary group-hover:text-white transition-colors">Book &rarr;</span>
                     </div>
@@ -171,7 +202,7 @@
     </section>
 
     <!-- How It Works Section -->
-    <section class="py-24 px-6 bg-background border-t border-white/5">
+    <section class="py-24 px-6 bg-background border-t border-primary/10">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-serif text-white mb-4">How It Works</h2>
@@ -210,7 +241,7 @@
     </section>
 
     <!-- Contact Form Section -->
-    <section id="contact" class="py-24 px-6 bg-[#0a0a0a] border-t border-white/5 relative overflow-hidden">
+    <section id="contact" class="py-24 px-6 bg-[#0a0a0a] border-t border-primary/10 relative overflow-hidden">
         <div class="max-w-4xl mx-auto relative z-10">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-serif text-white mb-4">Get In Touch</h2>
@@ -223,20 +254,20 @@
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm text-textSecondary mb-2">Full Name</label>
-                            <input required type="text" class="w-full bg-black border border-white/10 rounded-xl p-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="John Doe">
+                            <input required type="text" class="w-full bg-black border border-primary/10 rounded-xl p-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="John Doe">
                         </div>
                         <div>
                             <label class="block text-sm text-textSecondary mb-2">Email Address</label>
-                            <input required type="email" class="w-full bg-black border border-white/10 rounded-xl p-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="john@example.com">
+                            <input required type="email" class="w-full bg-black border border-primary/10 rounded-xl p-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="john@example.com">
                         </div>
                     </div>
                     <div>
                         <label class="block text-sm text-textSecondary mb-2">Subject</label>
-                        <input required type="text" class="w-full bg-black border border-white/10 rounded-xl p-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="How can we help?">
+                        <input required type="text" class="w-full bg-black border border-primary/10 rounded-xl p-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="How can we help?">
                     </div>
                     <div>
                         <label class="block text-sm text-textSecondary mb-2">Message</label>
-                        <textarea required rows="4" class="w-full bg-black border border-white/10 rounded-xl p-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none" placeholder="Your message here..."></textarea>
+                        <textarea required rows="4" class="w-full bg-black border border-primary/10 rounded-xl p-4 text-white focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none" placeholder="Your message here..."></textarea>
                     </div>
                     <button type="submit" class="w-full bg-primary text-black font-bold py-4 rounded-xl hover:bg-white transition-all transform hover:scale-[1.02]">
                         Send Message
@@ -247,7 +278,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-24 px-6 bg-surface border-t border-white/5">
+    <section class="py-24 px-6 bg-surface border-t border-primary/10">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-serif text-white mb-4">Client Testimonials</h2>
@@ -255,7 +286,7 @@
             </div>
             
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-background border border-white/10 p-8 rounded-2xl relative">
+                <div class="bg-background border border-primary/10 p-8 rounded-2xl relative">
                     <i class="fas fa-quote-left text-4xl text-primary/20 absolute top-8 left-8"></i>
                     <div class="relative z-10 pl-4 pt-2">
                         <div class="flex text-primary mb-4 gap-1">
@@ -272,7 +303,7 @@
                     </div>
                 </div>
 
-                <div class="bg-background border border-white/10 p-8 rounded-2xl relative">
+                <div class="bg-background border border-primary/10 p-8 rounded-2xl relative">
                     <i class="fas fa-quote-left text-4xl text-primary/20 absolute top-8 left-8"></i>
                     <div class="relative z-10 pl-4 pt-2">
                         <div class="flex text-primary mb-4 gap-1">
@@ -293,7 +324,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black border-t border-white/5 pt-16 pb-8">
+    <footer class="bg-black border-t border-primary/10 pt-16 pb-8">
         <div class="max-w-6xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-1 md:col-span-2">
@@ -302,13 +333,13 @@
                         Elevating your wellness journey with premium, professional recovery and mobility support delivered directly to your doorstep.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-surface border border-white/10 flex items-center justify-center text-textSecondary hover:text-primary hover:border-primary transition-colors">
+                        <a href="#" class="w-10 h-10 rounded-full bg-surface border border-primary/10 flex items-center justify-center text-textSecondary hover:text-primary hover:border-primary transition-colors">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-surface border border-white/10 flex items-center justify-center text-textSecondary hover:text-primary hover:border-primary transition-colors">
+                        <a href="#" class="w-10 h-10 rounded-full bg-surface border border-primary/10 flex items-center justify-center text-textSecondary hover:text-primary hover:border-primary transition-colors">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-surface border border-white/10 flex items-center justify-center text-textSecondary hover:text-primary hover:border-primary transition-colors">
+                        <a href="#" class="w-10 h-10 rounded-full bg-surface border border-primary/10 flex items-center justify-center text-textSecondary hover:text-primary hover:border-primary transition-colors">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </div>
@@ -337,7 +368,7 @@
                 </div>
             </div>
             
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-textSecondary">
+            <div class="border-t border-primary/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-textSecondary">
                 <p>&copy; 2026 AAA TO AHH.IN. All rights reserved.</p>
                 <div class="flex gap-6">
                     <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
@@ -357,7 +388,7 @@
 
             <div id="step-datetime">
                 <h3 class="text-lg mb-4 text-primary">1. Select Date</h3>
-                <div class="bg-black/50 rounded-xl p-4 border border-white/10 mb-8">
+                <div class="bg-black/50 rounded-xl p-4 border border-primary/10 mb-8">
                     <div class="flex justify-between items-center mb-4">
                         <button id="prev-month" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 text-white transition-colors">&lt;</button>
                         <div id="current-month" class="text-white font-serif text-lg"></div>
@@ -373,7 +404,7 @@
 
                 <h3 class="text-lg mb-4 text-primary">2. Select Time</h3>
                 <div class="grid grid-cols-3 gap-3 mb-8" id="slots-container">
-                    <div class="col-span-3 text-textSecondary text-center py-4 border border-dashed border-white/10 rounded-xl">Please select a date first</div>
+                    <div class="col-span-3 text-textSecondary text-center py-4 border border-dashed border-primary/10 rounded-xl">Please select a date first</div>
                 </div>
                 
                 <button onclick="nextStep()" class="w-full bg-primary text-black py-4 rounded-xl font-bold hover:bg-white transition-colors">Continue to Details</button>
@@ -614,3 +645,4 @@
     </script>
 </body>
 </html>
+

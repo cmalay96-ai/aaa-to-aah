@@ -3,19 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 245, 245, 245;
-  --background-start-rgb: 10, 10, 10;
-  --background-end-rgb: 10, 10, 10;
+  --foreground-rgb: 27, 51, 45; /* #1B332D */
+  --background-start-rgb: 250, 253, 252; /* #FAFDFC */
+  --background-end-rgb: 234, 244, 240; /* #EAF4F0 */
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
+  background: linear-gradient(180deg, rgb(var(--background-start-rgb)) 0%, rgb(var(--background-end-rgb)) 100%);
+  min-height: 100vh;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .bg-sea-gradient {
+    background: linear-gradient(135deg, #FAFDFC 0%, #EAF4F0 100%);
+  }
+  .bg-sea-radial {
+    background: radial-gradient(circle at top, #EAF4F0 0%, #FAFDFC 70%);
   }
 }
 

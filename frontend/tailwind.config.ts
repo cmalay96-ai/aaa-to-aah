@@ -9,16 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#D4AF37", // Gold
-        secondary: "#1A1A1A", // Dark Gray
-        background: "#0A0A0A", // Almost Black
-        surface: "#111111", // Slightly lighter black for cards
-        textPrimary: "#F5F5F5",
-        textSecondary: "#A3A3A3",
+        primary: "#0A4D3C", // Deep Premium Sea Green
+        secondary: "#EAF4F0", // Soft Sea Foam wash
+        background: "#FAFDFC", // Pure Wellness Off-White
+        surface: "#FFFFFF", // Luxury White Cards
+        textPrimary: "#1B332D", // Deep Therapeutic Charcoal
+        textSecondary: "#4A635C", // Mid-tone green-gray
         // AAATOAHH Brand Colors
-        brandBlack: "#020202",
-        brandNavy: "#070C18",
-        brandNavyLight: "#0F172A",
+        brandBlack: "#FFFFFF",
+        brandNavy: "#FAFDFC",
+        brandNavyLight: "#EAF4F0",
         brandLime: "#A3E635",
         brandLimeDark: "#84CC16",
         brandOrange: "#FB923C",

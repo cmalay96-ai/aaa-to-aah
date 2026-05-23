@@ -29,30 +29,30 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-black border-t border-white/5 pt-16 pb-8">
+    <footer className="bg-surface border-t border-primary/10 pt-16 pb-8">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-3xl font-serif text-white mb-4">AAA TO AHH.IN<span className="text-primary">.</span></h3>
-            <p className="text-textSecondary mb-6 max-w-sm">
+            <h3 className="text-3xl font-serif text-textPrimary mb-4">AAA TO AHH.IN<span className="text-primary">.</span></h3>
+            <p className="text-textSecondary mb-6 max-w-sm font-medium">
               Elevating your wellness journey with premium, professional recovery and mobility support delivered directly to your doorstep.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-surface border border-white/10 flex items-center justify-center text-textSecondary hover:text-primary hover:border-primary transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-background border border-primary/10 flex items-center justify-center text-textSecondary hover:text-primary hover:border-primary transition-colors">
                 <FaInstagram />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-surface border border-white/10 flex items-center justify-center text-textSecondary hover:text-primary hover:border-primary transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-background border border-primary/10 flex items-center justify-center text-textSecondary hover:text-primary hover:border-primary transition-colors">
                 <FaFacebookF />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-surface border border-white/10 flex items-center justify-center text-textSecondary hover:text-primary hover:border-primary transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-background border border-primary/10 flex items-center justify-center text-textSecondary hover:text-primary hover:border-primary transition-colors">
                 <FaTwitter />
               </a>
             </div>
           </div>
           
           <div>
-            <h4 className="text-white font-serif text-lg mb-6">Quick Links</h4>
-            <ul className="space-y-3 text-textSecondary">
+            <h4 className="text-textPrimary font-serif text-lg mb-6">Quick Links</h4>
+            <ul className="space-y-3 text-textSecondary font-medium">
               <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
               <li><Link href="/#services" className="hover:text-primary transition-colors">Services</Link></li>
               <li><Link href="/book" className="hover:text-primary transition-colors">Book a Session</Link></li>
@@ -61,22 +61,22 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="text-white font-serif text-lg mb-6">Contact Us</h4>
-            <ul className="space-y-3 text-textSecondary">
+            <h4 className="text-textPrimary font-serif text-lg mb-6">Contact Us</h4>
+            <ul className="space-y-3 text-textSecondary font-medium">
               <li>hello@aaatoahh.in</li>
               <li>+91 7908082151</li>
               <li className="pt-2">
-                <p className="text-white text-sm">Working Hours:</p>
-                <p className="text-sm">Mon-Sun: 10AM - 8PM</p>
+                <p className="text-textPrimary text-sm font-semibold">Working Hours:</p>
+                <p className="text-sm font-medium">Mon-Sun: 10AM - 8PM</p>
               </li>
             </ul>
           </div>
         </div>
         
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-textSecondary">
+        <div className="border-t border-primary/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-textSecondary font-medium">
           <p>&copy; {new Date().getFullYear()} AAA TO AHH.IN. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>

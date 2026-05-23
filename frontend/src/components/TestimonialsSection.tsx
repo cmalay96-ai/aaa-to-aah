@@ -17,9 +17,9 @@ interface TestimonialsSectionProps {
 }
 
 export default function TestimonialsSection({ category, accentColor = "lime" }: TestimonialsSectionProps) {
-  const accentText = accentColor === "lime" ? "text-brandLime" : "text-brandOrange";
-  const borderHighlight = accentColor === "lime" ? "border-brandLime/10 hover:border-brandLime/40" : "border-brandOrange/10 hover:border-brandOrange/40";
-  const badgeBg = accentColor === "lime" ? "bg-brandLime/10 text-brandLime" : "bg-brandOrange/10 text-brandOrange";
+  const accentText = "text-primary";
+  const borderHighlight = "border-primary/10 hover:border-primary/30";
+  const badgeBg = "bg-primary/10 text-primary";
 
   // Testimonials categorized for specific funnels
   const testimonialsMap: Record<string, Testimonial[]> = {
@@ -108,16 +108,16 @@ export default function TestimonialsSection({ category, accentColor = "lime" }: 
   const list = testimonialsMap[category] || testimonialsMap.gym;
 
   return (
-    <section className="py-20 px-4 bg-[#030303] border-t border-white/5">
+    <section className="py-20 px-4 bg-background border-t border-primary/10">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <span className={`text-xs font-montserrat font-bold uppercase tracking-widest px-4 py-1.5 rounded-full bg-white/5 ${accentText}`}>
+          <span className="text-xs font-montserrat font-bold uppercase tracking-widest px-4 py-1.5 rounded-full bg-primary/5 text-primary">
             Real User Experiences
           </span>
-          <h2 className="text-3xl md:text-5xl font-poppins font-extrabold text-white mt-4 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-poppins font-extrabold text-textPrimary mt-4 tracking-tight">
             Loved By Active Recoverers
           </h2>
-          <p className="text-textSecondary text-xs mt-3 max-w-md mx-auto">
+          <p className="text-textSecondary text-xs mt-3 max-w-md mx-auto font-medium">
             See how our mobile home recovery system has changed lives, restored mobility, and accelerated recovery.
           </p>
         </div>
@@ -126,29 +126,29 @@ export default function TestimonialsSection({ category, accentColor = "lime" }: 
           {list.map((item, idx) => (
             <div
               key={idx}
-              className={`bg-[#070b16] border rounded-3xl p-8 transition-all duration-300 relative group overflow-hidden ${borderHighlight}`}
+              className={`bg-surface border rounded-3xl p-8 transition-all duration-300 relative group overflow-hidden shadow-[0_4px_20px_-4px_rgba(10,77,60,0.05)] ${borderHighlight}`}
             >
-              {/* WhatsApp Verification Tick */}
-              <div className="absolute top-8 right-8 flex items-center gap-1.5 bg-green-500/10 text-green-400 px-3 py-1 rounded-full text-xs font-montserrat">
+              {/* Verified Lead Tick */}
+              <div className="absolute top-8 right-8 flex items-center gap-1.5 bg-green-500/10 text-green-700 px-3 py-1 rounded-full text-xs font-montserrat font-semibold">
                 <FaCheck className="text-[10px]" /> Verified Lead
               </div>
 
-              <FaQuoteLeft className="text-4xl text-white/5 mb-6" />
+              <FaQuoteLeft className="text-4xl text-primary/5 mb-6" />
 
-              <div className="flex text-yellow-400 mb-4 gap-1">
+              <div className="flex text-yellow-500 mb-4 gap-1">
                 {[...Array(item.rating)].map((_, i) => (
                   <FaStar key={i} />
                 ))}
               </div>
 
-              <p className="text-white text-base font-medium leading-relaxed mb-6 font-poppins">
+              <p className="text-textPrimary text-base font-semibold leading-relaxed mb-6 font-poppins">
                 "{item.text}"
               </p>
 
-              <div className="flex justify-between items-center mt-auto pt-6 border-t border-white/5">
+              <div className="flex justify-between items-center mt-auto pt-6 border-t border-primary/10">
                 <div>
-                  <h4 className="text-white font-poppins font-bold">{item.name}</h4>
-                  <p className="text-textSecondary text-xs font-montserrat mt-0.5">{item.role}</p>
+                  <h4 className="text-textPrimary font-poppins font-bold">{item.name}</h4>
+                  <p className="text-textSecondary text-xs font-montserrat mt-0.5 font-medium">{item.role}</p>
                 </div>
                 {item.highlightText && (
                   <span className={`text-xs font-montserrat font-semibold px-3 py-1 rounded-full ${badgeBg}`}>

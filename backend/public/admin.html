@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -13,12 +13,12 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#D4AF37",
-                        secondary: "#1A1A1A",
-                        background: "#0A0A0A",
-                        surface: "#111111",
-                        textPrimary: "#F5F5F5",
-                        textSecondary: "#A3A3A3",
+                        primary: "#0A4D3C",
+                        secondary: "#EAF4F0",
+                        background: "#FAFDFC",
+                        surface: "#FFFFFF",
+                        textPrimary: "#1B332D",
+                        textSecondary: "#4A635C",
                     },
                     fontFamily: {
                         serif: ['"Playfair Display"', 'serif'],
@@ -30,8 +30,8 @@
     </script>
     <style>
         body {
-            background-color: #0A0A0A;
-            color: #F5F5F5;
+            background-color: #FAFDFC;`n            color: #1B332D;
+            color: #1B332D;
             font-family: 'Inter', sans-serif;
         }
         h1, h2, h3, h4, h5, h6, .font-serif {
@@ -62,7 +62,7 @@
                             <p class="text-textSecondary">Enter your credentials to access the dashboard</p>
                         </div>
 
-                        <div class="bg-surface/80 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
+                        <div class="bg-white/85 backdrop-blur-xl border border-primary/10 rounded-2xl p-8 shadow-2xl">
                             <div id="login-error" class="${errorMessage ? '' : 'hidden'} mb-4 p-3 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-sm text-center">
                                 ${errorMessage}
                             </div>
@@ -76,7 +76,7 @@
                                             id="login-email"
                                             type="email" 
                                             required
-                                            class="w-full bg-background border border-white/10 rounded-lg py-2.5 pl-10 pr-4 text-white placeholder:text-gray-600 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                            class="w-full bg-background border border-primary/10 rounded-lg py-2.5 pl-10 pr-4 text-white placeholder:text-gray-600 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                                             placeholder="cmalay96@gmail.com"
                                         />
                                     </div>
@@ -90,7 +90,7 @@
                                             id="login-password"
                                             type="password" 
                                             required
-                                            class="w-full bg-background border border-white/10 rounded-lg py-2.5 pl-10 pr-4 text-white placeholder:text-gray-600 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                                            class="w-full bg-background border border-primary/10 rounded-lg py-2.5 pl-10 pr-4 text-white placeholder:text-gray-600 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                                             placeholder="••••••••"
                                         />
                                     </div>
@@ -199,6 +199,56 @@
         
         document.addEventListener('DOMContentLoaded', verifyAdmin);
     </script>
+
+    <style>
+        body, h1, h2, h3, h4, h5, h6, p, span:not(.bg-primary):not(.no-dark), li, label, td, th {
+            color: #1B332D !important;
+        }
+        .text-white {
+            color: #1B332D !important;
+        }
+        .text-textSecondary {
+            color: #4A635C !important;
+        }
+        button, .bg-primary, .bg-primary *, button *, a.bg-[#25D366], a.bg-[#25D366] *, a.bg-blue-600, a.bg-blue-600 * {
+            color: #FFFFFF !important;
+        }
+        .bg-primary {
+            background-color: #0A4D3C !important;
+        }
+        .hover\:bg-white:hover {
+            background-color: #07362a !important;
+            color: #FFFFFF !important;
+        }
+        .text-primary {
+            color: #0A4D3C !important;
+        }
+        /* Specific login styling */
+        label.text-gray-300 {
+            color: #4A635C !important;
+        }
+        .bg-surface\/80 {
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            border-color: rgba(10, 77, 60, 0.15) !important;
+        }
+        input {
+            background-color: #FAFDFC !important;
+            border-color: rgba(10, 77, 60, 0.15) !important;
+            color: #1B332D !important;
+        }
+        /* Sidebar layout styling */
+        aside.bg-\[\\#0e0e0e\] {
+            background-color: #EAF4F0 !important;
+            border-color: rgba(10, 77, 60, 0.15) !important;
+        }
+        aside a {
+            color: #4A635C !important;
+        }
+        aside a.bg-white\/5 {
+            background-color: rgba(10, 77, 60, 0.1) !important;
+            color: #0A4D3C !important;
+        }
+    </style>
 </head>
 <body class="antialiased min-h-screen pt-12 pb-12 px-4 bg-background">
 
@@ -220,7 +270,7 @@
 
         <!-- Stats Grid -->
         <div class="grid md:grid-cols-3 gap-6 mb-12">
-            <div class="bg-surface border border-white/10 p-6 rounded-2xl">
+            <div class="bg-surface border border-primary/10 p-6 rounded-2xl">
                 <div class="flex justify-between items-start mb-4">
                     <div class="p-3 bg-primary/10 rounded-lg text-primary"><i class="fas fa-calendar-alt text-2xl"></i></div>
                     <span class="text-green-400 text-sm font-medium">+12%</span>
@@ -229,7 +279,7 @@
                 <p class="text-3xl font-serif text-white" id="stat-total-bookings">0</p>
             </div>
             
-            <div class="bg-surface border border-white/10 p-6 rounded-2xl">
+            <div class="bg-surface border border-primary/10 p-6 rounded-2xl">
                 <div class="flex justify-between items-start mb-4">
                     <div class="p-3 bg-primary/10 rounded-lg text-primary"><i class="fas fa-chart-line text-2xl"></i></div>
                     <span class="text-green-400 text-sm font-medium">+8%</span>
@@ -238,7 +288,7 @@
                 <p class="text-3xl font-serif text-white" id="stat-total-revenue">$0</p>
             </div>
             
-            <div class="bg-surface border border-white/10 p-6 rounded-2xl">
+            <div class="bg-surface border border-primary/10 p-6 rounded-2xl">
                 <div class="flex justify-between items-start mb-4">
                     <div class="p-3 bg-primary/10 rounded-lg text-primary"><i class="fas fa-spa text-2xl"></i></div>
                     <span class="text-textSecondary text-sm font-medium">This Month</span>
@@ -249,8 +299,8 @@
         </div>
 
         <!-- Bookings List -->
-        <div class="bg-surface border border-white/10 rounded-2xl overflow-hidden">
-            <div class="p-6 border-b border-white/10 flex justify-between items-center">
+        <div class="bg-surface border border-primary/10 rounded-2xl overflow-hidden">
+            <div class="p-6 border-b border-primary/10 flex justify-between items-center">
                 <h2 class="text-2xl font-serif text-white">Recent Appointments</h2>
             </div>
             
@@ -370,7 +420,7 @@
                             <p class="text-primary font-serif text-sm">₹${booking.price}</p>
                         </td>
                         <td class="p-4">
-                            <div class="bg-black/50 border border-white/10 rounded-lg p-2 inline-block">
+                            <div class="bg-black/50 border border-primary/10 rounded-lg p-2 inline-block">
                                 <p class="text-white text-sm font-medium">${booking.date}</p>
                                 <p class="text-primary text-xs flex items-center gap-1"><i class="fas fa-clock text-[10px]"></i> ${booking.time}</p>
                             </div>
@@ -406,7 +456,7 @@
             const dateBooked = new Date(booking.bookedAt).toLocaleString();
 
             content.innerHTML = `
-                <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5">
+                <div class="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-primary/10">
                     <div class="w-16 h-16 rounded-full bg-primary/20 text-primary flex items-center justify-center font-serif text-2xl font-bold">
                         ${booking.customerName ? booking.customerName.charAt(0).toUpperCase() : 'G'}
                     </div>
@@ -417,13 +467,13 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                    <div class="bg-black/20 p-4 rounded-xl border border-primary/10">
                         <p class="text-textSecondary text-xs uppercase tracking-wider mb-1">Contact Phone</p>
                         <p class="text-white font-medium flex items-center gap-2">
                             <i class="fas fa-phone text-primary text-xs"></i> ${booking.customerPhone}
                         </p>
                     </div>
-                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                    <div class="bg-black/20 p-4 rounded-xl border border-primary/10">
                         <p class="text-textSecondary text-xs uppercase tracking-wider mb-1">Appointment Cost</p>
                         <p class="text-white font-medium flex items-center gap-2 text-lg">
                             ₹${booking.price}
@@ -431,7 +481,7 @@
                     </div>
                 </div>
 
-                <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                <div class="bg-black/20 p-4 rounded-xl border border-primary/10">
                     <p class="text-textSecondary text-xs uppercase tracking-wider mb-1">Service Requested</p>
                     <p class="text-white font-medium flex items-center gap-2 text-lg">
                         <i class="fas fa-spa text-primary text-sm"></i> ${booking.service}
@@ -439,13 +489,13 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                    <div class="bg-black/20 p-4 rounded-xl border border-primary/10">
                         <p class="text-textSecondary text-xs uppercase tracking-wider mb-1">Appointment Date</p>
                         <p class="text-white font-medium flex items-center gap-2">
                             <i class="fas fa-calendar-alt text-primary text-xs"></i> ${booking.date}
                         </p>
                     </div>
-                    <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                    <div class="bg-black/20 p-4 rounded-xl border border-primary/10">
                         <p class="text-textSecondary text-xs uppercase tracking-wider mb-1">Time Slot</p>
                         <p class="text-white font-medium flex items-center gap-2">
                             <i class="fas fa-clock text-primary text-xs"></i> ${booking.time}
@@ -453,14 +503,14 @@
                     </div>
                 </div>
 
-                <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                <div class="bg-black/20 p-4 rounded-xl border border-primary/10">
                     <p class="text-textSecondary text-xs uppercase tracking-wider mb-1">Service Address</p>
                     <p class="text-white font-medium flex items-center gap-2">
                         <i class="fas fa-map-marker-alt text-primary text-xs"></i> ${booking.customerAddress}
                     </p>
                 </div>
 
-                <div class="flex justify-between text-xs text-textSecondary pt-2 border-t border-white/5">
+                <div class="flex justify-between text-xs text-textSecondary pt-2 border-t border-primary/10">
                     <span>Reference ID: ${booking.id}</span>
                     <span>Booked At: ${dateBooked}</span>
                 </div>
@@ -515,9 +565,9 @@
 
     <!-- Booking Details Modal -->
     <div id="details-modal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-[9999] flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
-        <div class="bg-surface border border-white/10 w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl scale-95 transition-transform duration-300" id="details-modal-card">
+        <div class="bg-surface border border-primary/10 w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl scale-95 transition-transform duration-300" id="details-modal-card">
             <!-- Header -->
-            <div class="px-6 py-4 bg-black/40 border-b border-white/5 flex justify-between items-center">
+            <div class="px-6 py-4 bg-black/40 border-b border-primary/10 flex justify-between items-center">
                 <h3 class="text-lg font-serif text-white flex items-center gap-2">
                     <i class="fas fa-user-circle text-primary"></i> Customer Appointment Profile
                 </h3>
@@ -530,7 +580,7 @@
                 <!-- Populated by JS -->
             </div>
             <!-- Footer -->
-            <div class="px-6 py-4 bg-black/40 border-t border-white/5 flex justify-between gap-3 items-center">
+            <div class="px-6 py-4 bg-black/40 border-t border-primary/10 flex justify-between gap-3 items-center">
                 <button id="modal-delete-btn" class="bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 px-5 py-2 rounded-full text-red-400 text-sm transition-colors flex items-center gap-2">
                     <i class="fas fa-trash-alt"></i> Cancel Appointment
                 </button>
@@ -542,3 +592,4 @@
     </div>
 </body>
 </html>
+

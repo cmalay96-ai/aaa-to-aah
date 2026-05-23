@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -7,14 +7,14 @@ import TestimonialsSection from "../components/TestimonialsSection";
 
 export default function ThankYouLegRecoveryPage() {
   return (
-    <div className="bg-brandBlack min-h-screen text-white font-sans antialiased overflow-x-hidden selection:bg-brandLime selection:text-black">
+    <div className="bg-background min-h-screen text-textPrimary font-sans antialiased overflow-x-hidden selection:bg-primary/10 selection:text-primary">
       
       {/* 1. Header */}
-      <header className="py-6 px-4 border-b border-white/5 bg-brandBlack/80 backdrop-blur-md">
+      <header className="py-6 px-4 border-b border-primary/10 bg-white/80 backdrop-blur-md">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <Link href="/leg-recovery">
-            <span className="text-xl md:text-2xl font-montserrat font-black tracking-tighter text-white">
-              AAATOAHH<span className="text-brandLime">.IN</span>
+            <span className="text-xl md:text-2xl font-montserrat font-black tracking-tighter text-primary font-bold">
+              AAATOAHH<span className="text-primary">.IN</span>
             </span>
           </Link>
           <span className="text-xs font-montserrat font-bold bg-green-500/10 text-green-400 px-3 py-1 rounded-full border border-green-500/20">
@@ -24,23 +24,23 @@ export default function ThankYouLegRecoveryPage() {
       </header>
 
       {/* 2. Success Banner */}
-      <section className="relative py-20 px-4 bg-gradient-to-b from-brandNavy to-brandBlack text-center overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-[400px] h-[400px] rounded-full bg-brandLime/5 blur-[150px] pointer-events-none" />
+      <section className="relative py-20 px-4 bg-sea-radial text-center overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[150px] pointer-events-none" />
         
         <div className="max-w-3xl mx-auto space-y-6 relative z-10">
-          <div className="w-20 h-20 bg-brandLime/10 border border-brandLime/30 rounded-full flex items-center justify-center text-brandLime text-4xl mx-auto animate-pulse">
+          <div className="w-20 h-20 bg-brandLime/10 border border-brandLime/30 rounded-full flex items-center justify-center text-primary text-4xl mx-auto animate-pulse">
             🦵
           </div>
           
-          <h1 className="text-3xl md:text-5xl font-poppins font-extrabold text-white leading-tight tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-serif text-textPrimary leading-tight tracking-tight">
             Thank You, Active Recoverer! <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandLime to-white">
+            <span className="text-primary italic">
               Your Leg Recovery Demo Is Initialized.
             </span>
           </h1>
           
           <p className="text-textSecondary text-base md:text-lg font-light leading-relaxed max-w-xl mx-auto">
-            We've received your request for a <strong className="text-white">FREE 10-Minute Lower Body Recovery Demo</strong>. A mobile-scheduling assistant is mapping out specialists in your sector.
+            We've received your request for a <strong className="text-primary font-bold">FREE 10-Minute Lower Body Recovery Demo</strong>. A mobile-scheduling assistant is mapping out specialists in your sector.
           </p>
 
           {/* Action Buttons Section */}
@@ -59,7 +59,7 @@ export default function ThankYouLegRecoveryPage() {
             {/* Visit Website Button */}
             <a
               href="https://aaatoahh.in"
-              className="w-full sm:w-auto bg-white/5 border border-white/10 text-white font-poppins font-bold text-sm uppercase px-8 py-4 rounded-xl hover:bg-white hover:text-black transition-all flex items-center justify-center gap-2.5"
+              className="w-full sm:w-auto bg-white border border-primary/15 text-textPrimary font-poppins font-bold text-sm uppercase px-8 py-4 rounded-xl hover:bg-secondary/30 transition-all flex items-center justify-center gap-2.5"
             >
               <FaGlobe />
               VISIT WEBSITE
@@ -69,38 +69,38 @@ export default function ThankYouLegRecoveryPage() {
       </section>
 
       {/* 3. What Happens Next */}
-      <section className="py-16 px-4 bg-brandBlack border-t border-white/5">
+      <section className="py-16 px-4 bg-surface border-t border-primary/10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-poppins font-extrabold text-white">
+            <h2 className="text-2xl md:text-3xl font-serif text-textPrimary">
               Next Recovery Stages
             </h2>
-            <div className="w-12 h-0.5 bg-brandLime mx-auto mt-3" />
+            <div className="w-12 h-0.5 bg-primary/30 mx-auto mt-3" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Step 1 */}
-            <div className="bg-[#070b16] border border-white/5 p-6 rounded-2xl relative overflow-hidden">
-              <div className="text-3xl text-brandLime mb-4"><FaClipboardList /></div>
-              <h3 className="text-lg font-poppins font-bold text-white mb-2">1. Specialist Selection</h3>
+            <div className="bg-surface border border-primary/10 shadow-sm hover:border-primary/30 transition-all duration-300 p-6 rounded-2xl relative overflow-hidden">
+              <div className="text-3xl text-primary mb-4"><FaClipboardList /></div>
+              <h3 className="text-lg font-poppins font-bold text-textPrimary mb-2">1. Specialist Selection</h3>
               <p className="text-textSecondary text-xs leading-relaxed font-light">
                 We assign a certified lower-limb therapist specialized in sports massage and passive stretch routines.
               </p>
             </div>
 
             {/* Step 2 */}
-            <div className="bg-[#070b16] border border-white/5 p-6 rounded-2xl relative overflow-hidden">
-              <div className="text-3xl text-brandLime mb-4"><FaClock /></div>
-              <h3 className="text-lg font-poppins font-bold text-white mb-2">2. Timing Coordination</h3>
+            <div className="bg-surface border border-primary/10 shadow-sm hover:border-primary/30 transition-all duration-300 p-6 rounded-2xl relative overflow-hidden">
+              <div className="text-3xl text-primary mb-4"><FaClock /></div>
+              <h3 className="text-lg font-poppins font-bold text-textPrimary mb-2">2. Timing Coordination</h3>
               <p className="text-textSecondary text-xs leading-relaxed font-light">
                 We contact you to verify a precise time slot that integrates neatly around your workout or post-office window.
               </p>
             </div>
 
             {/* Step 3 */}
-            <div className="bg-[#070b16] border border-white/5 p-6 rounded-2xl relative overflow-hidden">
-              <div className="text-3xl text-brandLime mb-4"><FaCalendarCheck /></div>
-              <h3 className="text-lg font-poppins font-bold text-white mb-2">3. In-Home Muscular Release</h3>
+            <div className="bg-surface border border-primary/10 shadow-sm hover:border-primary/30 transition-all duration-300 p-6 rounded-2xl relative overflow-hidden">
+              <div className="text-3xl text-primary mb-4"><FaCalendarCheck /></div>
+              <h3 className="text-lg font-poppins font-bold text-textPrimary mb-2">3. In-Home Muscular Release</h3>
               <p className="text-textSecondary text-xs leading-relaxed font-light">
                 Enjoy your customized leg-decompression demo directly on your living room couch. Feel walking lightness in 10 minutes.
               </p>
@@ -113,43 +113,44 @@ export default function ThankYouLegRecoveryPage() {
       <TestimonialsSection category="leg" accentColor="lime" />
 
       {/* 5. Explore Other Recovery Services Section */}
-      <section className="py-20 px-4 bg-[#030303] border-t border-white/5 text-center">
+      <section className="py-20 px-4 bg-background border-t border-primary/10 text-center">
         <div className="max-w-4xl mx-auto space-y-8">
           <div>
-            <h2 className="text-2xl md:text-4xl font-poppins font-extrabold text-white">
+            <h2 className="text-2xl md:text-4xl font-serif text-textPrimary">
               Explore Our Elite Recovery Portfolios
             </h2>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Link href="/gym-recovery" className="bg-[#070b16] hover:bg-brandLime/5 border border-white/5 p-4 rounded-xl transition-all duration-300 group">
+            <Link href="/gym-recovery" className="bg-surface hover:bg-secondary/40 border border-primary/10 shadow-sm p-4 rounded-xl transition-all duration-300 group">
               <span className="text-lg block group-hover:scale-110 transition-transform">⚡</span>
-              <h4 className="text-xs font-poppins font-bold text-white mt-2">Gym Recovery</h4>
+              <h4 className="text-xs font-poppins font-bold text-textPrimary mt-2">Gym Recovery</h4>
             </Link>
 
-            <Link href="/joint-pain-relief" className="bg-[#070b16] hover:bg-brandLime/5 border border-white/5 p-4 rounded-xl transition-all duration-300 group">
+            <Link href="/joint-pain-relief" className="bg-surface hover:bg-secondary/40 border border-primary/10 shadow-sm p-4 rounded-xl transition-all duration-300 group">
               <span className="text-lg block group-hover:scale-110 transition-transform">🦴</span>
-              <h4 className="text-xs font-poppins font-bold text-white mt-2">Joint Pain Relief</h4>
+              <h4 className="text-xs font-poppins font-bold text-textPrimary mt-2">Joint Pain Relief</h4>
             </Link>
 
-            <Link href="/parents-pain-care" className="bg-[#070b16] hover:bg-brandLime/5 border border-white/5 p-4 rounded-xl transition-all duration-300 group">
+            <Link href="/parents-pain-care" className="bg-surface hover:bg-secondary/40 border border-primary/10 shadow-sm p-4 rounded-xl transition-all duration-300 group">
               <span className="text-lg block group-hover:scale-110 transition-transform">👵</span>
-              <h4 className="text-xs font-poppins font-bold text-white mt-2">Parents Pain Care</h4>
+              <h4 className="text-xs font-poppins font-bold text-textPrimary mt-2">Parents Pain Care</h4>
             </Link>
 
-            <Link href="/sleep-relaxation" className="bg-[#070b16] hover:bg-brandLime/5 border border-white/5 p-4 rounded-xl transition-all duration-300 group">
+            <Link href="/sleep-relaxation" className="bg-surface hover:bg-secondary/40 border border-primary/10 shadow-sm p-4 rounded-xl transition-all duration-300 group">
               <span className="text-lg block group-hover:scale-110 transition-transform">💤</span>
-              <h4 className="text-xs font-poppins font-bold text-white mt-2">Sleep Recovery</h4>
+              <h4 className="text-xs font-poppins font-bold text-textPrimary mt-2">Sleep Recovery</h4>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-brandBlack text-center text-textSecondary text-xs border-t border-white/5">
+      <footer className="py-8 bg-surface text-center text-textSecondary text-xs border-t border-primary/10">
         <p>&copy; {new Date().getFullYear()} AAATOAHH.IN. Elite Home Mobility & Recovery Support. All rights reserved.</p>
       </footer>
 
     </div>
   );
 }
+
