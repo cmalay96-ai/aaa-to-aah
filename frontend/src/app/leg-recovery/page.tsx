@@ -88,6 +88,7 @@ export default function LegRecoveryPage() {
               painPointDefault="Tight calves, heavy legs, and hamstring stiffness" 
               redirectUrl="/thank-you-leg-recovery" 
               themeColor="lime" 
+              serviceName="Free Leg Recovery Demo"
             />
           </div>
 

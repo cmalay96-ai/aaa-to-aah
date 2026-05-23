@@ -88,6 +88,7 @@ export default function ParentsPainCarePage() {
               painPointDefault="Age-related stiffness and walking difficulty for elderly parents" 
               redirectUrl="/thank-you-parents-care" 
               themeColor="orange" 
+              serviceName="Free Parents Pain Care Demo"
             />
           </div>
 

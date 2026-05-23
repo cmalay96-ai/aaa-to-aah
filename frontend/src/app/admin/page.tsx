@@ -100,7 +100,7 @@ export default function AdminDashboardOverview() {
                     <td className="p-4">
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center text-xs font-bold font-serif">
-                          {booking.customerName.charAt(0).toUpperCase()}
+                          {(booking.customerName || 'Guest').charAt(0).toUpperCase()}
                         </div>
                         <div>
                           <p className="text-white text-sm font-medium">{booking.customerName}</p>

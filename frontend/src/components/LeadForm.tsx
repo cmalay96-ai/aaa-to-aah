@@ -3,14 +3,16 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { FaCheckCircle, FaSpinner } from "react-icons/fa";
+import { supabaseFetch } from "@/lib/supabaseClient";
 
 interface LeadFormProps {
   painPointDefault: string;
   redirectUrl: string;
   themeColor: "lime" | "orange";
+  serviceName: string;
 }
 
-export default function LeadForm({ painPointDefault, redirectUrl, themeColor }: LeadFormProps) {
+export default function LeadForm({ painPointDefault, redirectUrl, themeColor, serviceName }: LeadFormProps) {
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
@@ -25,25 +27,46 @@ export default function LeadForm({ painPointDefault, redirectUrl, themeColor }: 
     e.preventDefault();
     setLoading(true);
 
-    // Simulate API submission
-    setTimeout(() => {
+    try {
+      const bookedAt = new Date().toISOString();
+      const dateKey = bookedAt.split('T')[0];
+
+      // Save lead directly to the live Supabase table so it shows up in the admin dashboard
+      await supabaseFetch('bookings', {
+        method: 'POST',
+        body: JSON.stringify({
+          customerName: formData.name,
+          customerPhone: formData.phone,
+          customerAddress: formData.location,
+          service: serviceName,
+          price: 0,
+          date: dateKey,
+          time: "Demo Request",
+          bookedAt: bookedAt
+        })
+      });
+
       // Save lead to local storage for display or verification if needed
       const existingLeads = JSON.parse(localStorage.getItem("leads") || "[]");
       existingLeads.push({
         ...formData,
         id: Date.now(),
-        date: new Date().toISOString(),
+        date: bookedAt,
       });
       localStorage.setItem("leads", JSON.stringify(existingLeads));
 
-      setLoading(false);
       setSuccess(true);
 
       // Redirect after a short delay to show success animation
       setTimeout(() => {
         router.push(redirectUrl);
       }, 800);
-    }, 1200);
+    } catch (error) {
+      console.error("Booking demo failed", error);
+      alert("Failed to confirm demo booking. Please try again or contact support.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const accentColor = themeColor === "lime" ? "text-brandLime border-brandLime/30 focus:border-brandLime" : "text-brandOrange border-brandOrange/30 focus:border-brandOrange";

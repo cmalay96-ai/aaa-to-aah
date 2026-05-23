@@ -88,6 +88,7 @@ export default function GymRecoveryPage() {
               painPointDefault="Lactic acid build-up & incomplete muscle recovery after workouts" 
               redirectUrl="/thank-you-gym-recovery" 
               themeColor="lime" 
+              serviceName="Free Gym Recovery Demo"
             />
           </div>
 

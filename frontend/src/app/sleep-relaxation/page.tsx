@@ -89,6 +89,7 @@ export default function SleepRelaxationPage() {
               painPointDefault="Stress, mental exhaustion, physical tension & poor sleep quality" 
               redirectUrl="/thank-you-sleep-relaxation" 
               themeColor="orange" 
+              serviceName="Free Sleep Recovery Demo"
             />
           </div>
 

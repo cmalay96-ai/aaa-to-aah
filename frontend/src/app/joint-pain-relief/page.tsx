@@ -88,6 +88,7 @@ export default function JointPainReliefPage() {
               painPointDefault="Joint stiffness in shoulders, hips, knees or lower back" 
               redirectUrl="/thank-you-joint-pain" 
               themeColor="orange" 
+              serviceName="Free Joint Pain Relief Demo"
             />
           </div>
 
