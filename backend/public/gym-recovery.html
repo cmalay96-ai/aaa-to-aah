@@ -403,21 +403,51 @@
         });
 
         // Form submission simulated save to Supabase / Redirect
+        const SUPABASE_URL = 'https://tbdmuznvuezgjjvlorhg.supabase.co/rest/v1/';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRiZG11em52dWV6Z2pqdmxvcmhnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg4NjM1NTMsImV4cCI6MjA5NDQzOTU1M30.L83DhdnmRNHovfubhbJUxqAlMOrkaYKoq-ET_hOwRXw';
+
         const form = document.getElementById('funnel-lead-form');
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner animate-spin"></i> SECURING SLOT...';
+
             const formData = new FormData(form);
-            const data = {
-                name: formData.get('name'),
-                phone: formData.get('phone'),
-                location: formData.get('location'),
-                concern: formData.get('concern'),
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+            const location = formData.get('location');
+            const concern = formData.get('concern');
+
+            const payload = {
+                customerName: name,
+                customerPhone: phone,
+                customerAddress: location,
+                service: "Free Gym Recovery Demo",
+                price: 0,
+                date: new Date().toISOString().split('T')[0],
+                time: "Demo Request",
                 bookedAt: new Date().toISOString()
             };
 
+            try {
+                // Post to Supabase
+                await fetch(`${SUPABASE_URL}bookings`, {
+                    method: 'POST',
+                    headers: {
+                        'apikey': SUPABASE_KEY,
+                        'Authorization': `Bearer ${SUPABASE_KEY}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+            } catch (err) {
+                console.error("Failed to post lead", err);
+            }
+
             // Save to LocalStorage logs
             const existingLeads = JSON.parse(localStorage.getItem('funnel_leads') || '[]');
-            existingLeads.push(data);
+            existingLeads.push({ name, phone, location, concern, bookedAt: payload.bookedAt });
             localStorage.setItem('funnel_leads', JSON.stringify(existingLeads));
 
             // Redirect to Thank You Page
