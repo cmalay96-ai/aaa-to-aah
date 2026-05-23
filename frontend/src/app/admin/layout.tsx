@@ -74,9 +74,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <div className="md:hidden flex items-center justify-between p-4 border-b border-white/10 bg-surface">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-black font-bold font-serif">H</span>
+            <span className="text-black font-bold font-serif">A</span>
           </div>
-          <span className="font-serif font-bold text-lg text-primary">Heal Admin</span>
+          <span className="font-serif font-bold text-lg text-primary">AAA TO AHH.IN Admin</span>
         </div>
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-400 hover:text-white p-2">
           {isMobileMenuOpen ? <LuX size={24} /> : <LuMenu size={24} />}
@@ -87,9 +87,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:block w-full md:w-64 bg-surface border-r border-white/10 flex-shrink-0 flex flex-col transition-all z-50 absolute md:relative h-[calc(100vh-73px)] md:h-screen`}>
         <div className="hidden md:flex items-center gap-3 p-6 border-b border-white/10">
           <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-[0_0_15px_rgba(212,175,55,0.3)]">
-            <span className="text-black font-bold text-xl font-serif">H</span>
+            <span className="text-black font-bold text-xl font-serif">A</span>
           </div>
-          <span className="font-serif font-bold text-xl text-primary tracking-wide">Heal Admin</span>
+          <span className="font-serif font-bold text-xl text-primary tracking-wide">AAA TO AHH.IN Admin</span>
         </div>
 
         <nav className="flex-1 px-4 py-6 space-y-2 overflow-y-auto">

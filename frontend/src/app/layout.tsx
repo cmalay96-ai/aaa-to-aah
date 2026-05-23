@@ -16,8 +16,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Heal | Luxury Home Massage Services",
-  description: "Professional massage therapy at your home. Relax, recover & recharge with expert massage services.",
+  title: "AAA TO AHH.IN | Luxury Home Recovery & Mobility Services",
+  description: "Professional athletic recovery, lower limb stretching, joint mobility care, and sleep relaxation at your home.",
 };
 
 export default function RootLayout({

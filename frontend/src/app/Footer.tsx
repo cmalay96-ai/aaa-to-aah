@@ -33,9 +33,9 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-3xl font-serif text-white mb-4">Heal<span className="text-primary">.</span></h3>
+            <h3 className="text-3xl font-serif text-white mb-4">AAA TO AHH.IN<span className="text-primary">.</span></h3>
             <p className="text-textSecondary mb-6 max-w-sm">
-              Elevating your wellness journey with premium, professional massage therapy delivered directly to your doorstep.
+              Elevating your wellness journey with premium, professional recovery and mobility support delivered directly to your doorstep.
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-surface border border-white/10 flex items-center justify-center text-textSecondary hover:text-primary hover:border-primary transition-colors">
@@ -63,7 +63,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-serif text-lg mb-6">Contact Us</h4>
             <ul className="space-y-3 text-textSecondary">
-              <li>hello@healmassage.com</li>
+              <li>hello@aaatoahh.in</li>
               <li>+91 7908082151</li>
               <li className="pt-2">
                 <p className="text-white text-sm">Working Hours:</p>
@@ -74,7 +74,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-textSecondary">
-          <p>&copy; {new Date().getFullYear()} Heal Massage. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} AAA TO AHH.IN. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
