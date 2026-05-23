@@ -28,27 +28,100 @@
             }
         }
     </script>
+    
     <style>
-        body {
-            background-color: #FAFDFC;`n            color: #1B332D;
-            color: #1B332D;
-            font-family: 'Inter', sans-serif;
+        /* Base typography color for wellness light theme */
+        body, p, li, label, td, th {
+            color: #3D544E !important; /* Soft, readable mid-tone green-gray */
+            font-family: 'Inter', sans-serif !important;
         }
+        
+        /* HEADLINES: Make them stand out extremely bold, premium, and deep green! */
         h1, h2, h3, h4, h5, h6, .font-serif {
-            font-family: '"Playfair Display"', serif;
+            color: #0A4D3C !important; /* Deep signature premium sea green */
+            font-family: 'Playfair Display', serif !important;
+            font-weight: 800 !important;
+            letter-spacing: -0.01em !important;
         }
-        .hero-bg {
-            background-color: #FAFDFC;`n            color: #1B332D;
-            background-image: linear-gradient(to bottom, rgba(234, 244, 240, 0.4), rgba(250, 253, 252, 0.8)), url('hero%20image%202.jpeg');
-            background-size: cover;
-            background-position: top center;
+        
+        /* Specific page titles: give them ultimate premium contrast */
+        h1 {
+            color: #05261E !important; /* Ultra-deep forest green for the absolute best impression */
+            text-shadow: 0 1px 2px rgba(10, 77, 60, 0.05) !important;
         }
-    </style>
 
-    <style>
-        body, h1, h2, h3, h4, h5, h6, p, span:not(.bg-primary):not(.no-dark), li, label {
-            color: #1B332D !important;
+        /* TEXT GRADIENT class */
+        .text-gradient {
+            background: linear-gradient(135deg, #0A4D3C 0%, #C5A880 100%) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            color: transparent !important;
         }
+
+        /* BUTTONS: Ensure they stand out as high-contrast active CTAs! */
+        button, 
+        a[href*="wa.me"], 
+        a[href*="tel:"], 
+        a.bg-brandLime, 
+        a.bg-brandOrange, 
+        a.bg-primary, 
+        button[type="submit"], 
+        .btn-cta,
+        button[onclick] {
+            background: linear-gradient(135deg, #0A4D3C 0%, #166E58 100%) !important; /* Serene sea green gradient */
+            color: #FFFFFF !important; /* Crisp white text */
+            font-weight: 700 !important;
+            font-family: 'Inter', sans-serif !important;
+            letter-spacing: 0.05em !important;
+            border: 1px solid rgba(10, 77, 60, 0.2) !important;
+            box-shadow: 0 10px 25px -5px rgba(10, 77, 60, 0.3) !important; /* Colored elevation drop shadow */
+            transition: all 0.3s ease !important;
+        }
+        
+        button:hover, 
+        a[href*="wa.me"]:hover, 
+        a[href*="tel:"]:hover, 
+        a.bg-brandLime:hover, 
+        a.bg-brandOrange:hover, 
+        a.bg-primary:hover, 
+        button[type="submit"]:hover,
+        button[onclick]:hover {
+            background: #063529 !important; /* Even deeper green on hover */
+            color: #FFFFFF !important;
+            box-shadow: 0 12px 30px -5px rgba(10, 77, 60, 0.45) !important;
+            transform: translateY(-2px) !important;
+        }
+
+        /* Keep text color of items inside buttons white */
+        button *, 
+        a.bg-brandLime *, 
+        a.bg-brandOrange *, 
+        a.bg-primary *, 
+        button[type="submit"] *,
+        button[onclick] * {
+            color: #FFFFFF !important;
+        }
+
+        /* Secondary actions or borders */
+        .border-white\/10, .border-primary\/10 {
+            border-color: rgba(10, 77, 60, 0.12) !important;
+        }
+        .border-white\/5, .border-primary\/5 {
+            border-color: rgba(10, 77, 60, 0.08) !important;
+        }
+
+        /* Accent classes */
+        .text-brandLime, .text-brandOrange {
+            color: #0A4D3C !important;
+            font-weight: 700 !important;
+        }
+        
+        .bg-brandLime\/10, .bg-brandOrange\/10 {
+            background-color: rgba(10, 77, 60, 0.1) !important;
+            border-color: rgba(10, 77, 60, 0.2) !important;
+        }
+
+        /* Override general helper classes */
         .text-white {
             color: #1B332D !important;
         }
@@ -58,21 +131,28 @@
         .text-textSecondary {
             color: #4A635C !important;
         }
-        button, .bg-primary, .bg-primary *, button *, a.bg-[#25D366], a.bg-[#25D366] *, a.bg-blue-600, a.bg-blue-600 * {
-            color: #FFFFFF !important;
+
+        /* Form input focus styles */
+        input, textarea, select {
+            background-color: #FFFFFF !important;
+            border: 1px solid rgba(10, 77, 60, 0.2) !important;
+            color: #1B332D !important;
         }
-        .bg-primary {
-            background-color: #0A4D3C !important;
+        input:focus, textarea:focus {
+            border-color: #0A4D3C !important;
+            box-shadow: 0 0 0 2px rgba(10, 77, 60, 0.1) !important;
         }
-        .hover\:bg-white:hover {
-            background-color: #07362a !important;
-            color: #FFFFFF !important;
+        
+        /* Specific sidebar details */
+        aside {
+            background-color: #EAF4F0 !important;
         }
-        .text-primary {
+        aside a {
+            color: #1B332D !important;
+        }
+        aside a.bg-white\/5 {
+            background-color: rgba(10, 77, 60, 0.1) !important;
             color: #0A4D3C !important;
-        }
-        .shadow-\[0_0_30px_rgba\(212\,175\,55\,0\.4\)\] {
-            box-shadow: 0 10px 25px -5px rgba(10, 77, 60, 0.3) !important;
         }
     </style>
 </head>
@@ -645,4 +725,5 @@
     </script>
 </body>
 </html>
+
 

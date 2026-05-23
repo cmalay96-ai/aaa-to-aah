@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,6 +27,82 @@
             }
         }
     </script>
+    <style>
+        /* Base typography color for wellness light theme */
+        body, p, li, label, td, th {
+            color: #3D544E !important; /* Soft, readable mid-tone green-gray */
+            font-family: 'Inter', sans-serif !important;
+        }
+        
+        /* HEADLINES: Make them stand out extremely bold, premium, and deep green! */
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            color: #0A4D3C !important; /* Deep signature premium sea green */
+            font-family: 'Playfair Display', serif !important;
+            font-weight: 800 !important;
+            letter-spacing: -0.01em !important;
+        }
+        
+        /* Specific page titles: give them ultimate premium contrast */
+        h1 {
+            color: #05261E !important; /* Ultra-deep forest green for the absolute best impression */
+            text-shadow: 0 1px 2px rgba(10, 77, 60, 0.05) !important;
+        }
+
+        /* BUTTONS: Ensure they stand out as high-contrast active CTAs! */
+        button, 
+        a[href*="wa.me"], 
+        a[href*="tel:"], 
+        a.bg-brandLime, 
+        a.bg-brandOrange, 
+        a.bg-primary, 
+        button[type="submit"], 
+        .btn-cta,
+        button[onclick] {
+            background: linear-gradient(135deg, #0A4D3C 0%, #166E58 100%) !important; /* Serene sea green gradient */
+            color: #FFFFFF !important; /* Crisp white text */
+            font-weight: 700 !important;
+            font-family: 'Inter', sans-serif !important;
+            letter-spacing: 0.05em !important;
+            border: 1px solid rgba(10, 77, 60, 0.2) !important;
+            box-shadow: 0 10px 25px -5px rgba(10, 77, 60, 0.3) !important; /* Colored elevation drop shadow */
+            transition: all 0.3s ease !important;
+        }
+        
+        button:hover, 
+        a[href*="wa.me"]:hover, 
+        a[href*="tel:"]:hover, 
+        a.bg-brandLime:hover, 
+        a.bg-brandOrange:hover, 
+        a.bg-primary:hover, 
+        button[type="submit"]:hover,
+        button[onclick]:hover {
+            background: #063529 !important; /* Even deeper green on hover */
+            color: #FFFFFF !important;
+            box-shadow: 0 12px 30px -5px rgba(10, 77, 60, 0.45) !important;
+            transform: translateY(-2px) !important;
+        }
+
+        /* Keep text color of items inside buttons white */
+        button *, 
+        a.bg-brandLime *, 
+        a.bg-brandOrange *, 
+        a.bg-primary *, 
+        button[type="submit"] *,
+        button[onclick] * {
+            color: #FFFFFF !important;
+        }
+
+        /* Override general helper classes */
+        .text-white {
+            color: #1B332D !important;
+        }
+        .text-white\/90 {
+            color: rgba(27, 51, 45, 0.9) !important;
+        }
+        .text-textSecondary {
+            color: #4A635C !important;
+        }
+    </style>
 </head>
 <body class="bg-brandBlack text-white font-sans antialiased overflow-x-hidden selection:bg-brandOrange selection:text-black">
 
@@ -133,3 +209,4 @@
 
 </body>
 </html>
+
