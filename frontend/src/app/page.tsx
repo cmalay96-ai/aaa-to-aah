@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaSpa, FaLeaf, FaClock, FaCalendarAlt, FaHome, FaSmile, FaStar, FaQuoteLeft } from 'react-icons/fa';
 
 export default function Home() {
@@ -6,8 +7,16 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden bg-sea-radial">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-[0.08] saturate-[0.8] mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#EAF4F0]/40 to-background" />
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero-image-2.jpeg"
+            alt="Elite Wellness Assisted Stretching & Massage"
+            fill
+            priority
+            className="object-cover opacity-[0.25] saturate-[0.9] mix-blend-multiply"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#EAF4F0]/30 via-transparent to-background z-0" />
         
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-serif mb-6 text-textPrimary tracking-wide leading-tight">
