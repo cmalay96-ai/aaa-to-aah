@@ -13,7 +13,7 @@ export default function Home() {
             alt="Elite Wellness Assisted Stretching & Massage"
             fill
             priority
-            className="object-cover object-top opacity-[0.35] saturate-[0.9] mix-blend-multiply"
+            className="object-cover object-[center_80px] opacity-[0.35] saturate-[0.9] mix-blend-multiply"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#EAF4F0]/30 via-transparent to-background z-0" />
