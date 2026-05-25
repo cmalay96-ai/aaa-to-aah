@@ -6,73 +6,34 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-sea-radial pt-28 pb-16 px-4 md:px-12">
-        {/* Soft background glows */}
-        <div className="absolute top-0 right-1/4 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[150px] pointer-events-none" />
-        <div className="absolute bottom-0 left-1/4 w-[300px] h-[300px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
-        
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center relative z-10 w-full">
-          {/* Hero Left Content */}
-          <div className="lg:col-span-7 space-y-8 text-left">
-            <span className="inline-block text-xs font-montserrat font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
-              ✨ LUXURY HOME MASSAGE & MOBILE THERAPY
-            </span>
-            <h1 className="text-4xl md:text-6xl font-serif text-textPrimary leading-tight tracking-tight">
-              Professional Recovery & Mobility <br/>
-              <span className="text-primary italic">At Your Home</span>
-            </h1>
-            <p className="text-lg md:text-xl text-textSecondary leading-relaxed max-w-xl font-medium">
-              Relax, Recover & Recharge with Expert Assisted Stretching, Deep Tissue Release & Head Massage Services delivered directly to your doorstep.
-            </p>
-            
-            {/* Value Props */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="flex items-center gap-3">
-                <span className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs font-bold">✓</span>
-                <span className="text-sm font-semibold text-textPrimary">Vetted & Certified Therapists</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs font-bold">✓</span>
-                <span className="text-sm font-semibold text-textPrimary">100% Secure In-Home Setup</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs font-bold">✓</span>
-                <span className="text-sm font-semibold text-textPrimary">Premium Therapeutic Oils</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs font-bold">✓</span>
-                <span className="text-sm font-semibold text-textPrimary">Flexible Mon-Sun Hours</span>
-              </div>
-            </div>
+      <section className="relative min-h-screen flex flex-col justify-between items-center text-center pt-32 pb-16 px-4 bg-sea-radial">
+        <div className="max-w-4xl mx-auto z-10 px-4">
+          <h1 className="text-5xl md:text-7xl font-serif mb-6 text-textPrimary tracking-wide leading-tight">
+            Professional Recovery & Mobility <br/>
+            <span className="text-primary italic">At Your Home</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-textSecondary mb-10 font-medium">
+            Relax, Recover & Recharge with Expert Assisted Stretching & Release Services
+          </p>
+          <Link 
+            href="/book" 
+            className="inline-block bg-primary text-white font-bold px-10 py-4 rounded-full text-lg hover:bg-[#07362a] transition-all duration-300 transform hover:scale-105 shadow-[0_10px_20px_-5px_rgba(10,77,60,0.3)]"
+          >
+            Book Your Session
+          </Link>
+        </div>
 
-            <div className="pt-4">
-              <Link 
-                href="/book" 
-                className="inline-block bg-primary text-white font-bold px-10 py-4 rounded-full text-lg hover:bg-[#07362a] transition-all duration-300 transform hover:scale-105 shadow-[0_10px_20px_-5px_rgba(10,77,60,0.3)]"
-              >
-                Book Your Session
-              </Link>
-            </div>
-          </div>
-
-          {/* Hero Right: Padded Premium Image Frame (Fully Visible) */}
-          <div className="lg:col-span-5 flex justify-center items-center">
-            <div className="bg-white/80 backdrop-blur-md border border-primary/15 p-4 md:p-6 rounded-[32px] shadow-[0_20px_50px_rgba(10,77,60,0.08)] max-w-lg w-full transition-all duration-500 hover:shadow-[0_20px_50px_rgba(10,77,60,0.15)] hover:scale-[1.01]">
-              <div className="relative rounded-2xl overflow-hidden shadow-inner bg-secondary/20 aspect-[16/9] w-full">
-                <Image
-                  src="/hero-image-2.jpeg"
-                  alt="Elite Wellness Assisted Stretching & Massage"
-                  fill
-                  priority
-                  className="object-contain"
-                />
-              </div>
-              {/* Image Caption/Badge */}
-              <div className="mt-4 text-center">
-                <p className="text-xs font-montserrat font-bold text-primary uppercase tracking-wider">
-                  Abhishek Dev — Professional Home Therapist
-                </p>
-              </div>
+        {/* Padded Full Image Container */}
+        <div className="w-full max-w-4xl px-4 md:px-8 mt-12 z-10">
+          <div className="bg-white/80 border border-primary/10 p-3 md:p-4 rounded-[32px] shadow-lg">
+            <div className="relative rounded-2xl overflow-hidden w-full aspect-[16/9]">
+              <Image
+                src="/hero-image-2.jpeg"
+                alt="Elite Wellness Assisted Stretching & Massage"
+                fill
+                priority
+                className="object-contain"
+              />
             </div>
           </div>
         </div>
