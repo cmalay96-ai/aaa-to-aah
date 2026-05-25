@@ -6,20 +6,20 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-sea-radial">
+      <section className="relative h-screen flex flex-col justify-start items-center text-center pt-[42vh] pb-12 px-4 overflow-hidden bg-sea-radial">
         <div className="absolute inset-0 z-0">
           <Image
             src="/hero-image-2.jpeg"
             alt="Elite Wellness Assisted Stretching & Massage"
             fill
             priority
-            className="object-cover object-[center_80px] opacity-[0.35] saturate-[0.9] mix-blend-multiply"
+            className="object-cover object-top opacity-[0.35] saturate-[0.9] mix-blend-multiply"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#EAF4F0]/30 via-transparent to-background z-0" />
         
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 text-textPrimary tracking-wide leading-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif mb-6 text-textPrimary tracking-wide leading-tight">
             Professional Recovery & Mobility <br/>
             <span className="text-primary italic">At Your Home</span>
           </h1>
