@@ -64,6 +64,22 @@ app.get('/thank-you-sleep-relaxation', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/thank-you-sleep-relaxation.html'));
 });
 
+// 6. Neck & Headache Relief
+app.get('/neck-headache-relief', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/neck-headache-relief.html'));
+});
+app.get('/thank-you-neck-headache', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/thank-you-neck-headache.html'));
+});
+
+// 7. Neck Pain (Office Workers)
+app.get('/neck-pain-office-workers', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/neck-pain-office-workers.html'));
+});
+app.get('/thank-you-neck-pain', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/thank-you-neck-pain.html'));
+});
+
 // ---------------------------------
 
 // Serve the index.html landing page at the root route

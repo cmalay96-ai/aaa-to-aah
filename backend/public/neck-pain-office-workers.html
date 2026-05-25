@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Job Pays The Bills. But Is It Costing Your Neck? | AAATOAHH.IN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandLime: "#A3E635",
+                        brandLimeDark: "#84CC16",
+                        primary: "#0A4D3C",
+                        bgDark: "#0A192F",
+                        bgNavy: "#0E2447",
+                        textDark: "#1B332D",
+                        textLight: "#64748B",
+                        accentBlue: "#38BDF8",
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1B332D;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#FAFDFC] antialiased selection:bg-brandLime/20 selection:text-primary overflow-x-hidden">
+
+    <!-- 1. Header / Navigation -->
+    <header class="py-5 px-6 border-b border-[#EAF4F0] bg-[#0A192F]/95 backdrop-blur-md sticky top-0 z-30 shadow-sm">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="text-xl md:text-2xl font-montserrat font-black tracking-tighter text-white">
+                    AAATOAHH<span class="text-brandLime font-black">.IN</span>
+                </span>
+            </div>
+            <span class="text-xs font-montserrat font-extrabold bg-brandLime/10 text-brandLime px-4 py-2 rounded-full border border-brandLime/20 uppercase tracking-wider">
+                💻 Office Posture Specialists
+            </span>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section class="relative pt-16 pb-24 px-6 md:py-32 bg-gradient-to-b from-[#0A192F] via-[#0E2447] to-[#0A192F] overflow-hidden text-white">
+        <!-- Soft background glows -->
+        <div class="absolute top-0 right-1/4 w-[500px] h-[500px] rounded-full bg-brandLime/5 blur-[180px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-1/4 w-[300px] h-[300px] rounded-full bg-[#38BDF8]/5 blur-[150px] pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+            
+            <!-- Hero Left Content -->
+            <div class="md:col-span-7 space-y-8 text-left">
+                <span class="inline-block text-xs font-montserrat font-extrabold uppercase tracking-widest text-brandLime bg-brandLime/10 px-4 py-2 rounded-full border border-brandLime/20">
+                    ⚡ CORPORATE WELLNESS PROGRAM
+                </span>
+                <h1 class="text-4xl md:text-6xl font-serif text-white leading-tight tracking-tight font-extrabold">
+                    Your Job Pays The Bills. <br />
+                    <span class="text-brandLime italic font-serif">But Is It Costing Your Neck?</span>
+                </h1>
+                <p class="text-slate-300 text-base md:text-xl leading-relaxed max-w-xl font-light">
+                    Long hours at a desk, constant screen time, and poor posture can leave your neck, shoulders, and upper back feeling stiff and exhausted.
+                </p>
+
+                <!-- Quick value prop badge -->
+                <div class="p-6 bg-white/5 border border-white/10 rounded-3xl flex flex-col sm:flex-row items-start sm:items-center gap-4 max-w-xl shadow-lg backdrop-blur-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-brandLime/10 border border-brandLime/20 flex items-center justify-center text-brandLime text-2xl flex-shrink-0">
+                        🎁
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-montserrat font-bold text-brandLime uppercase tracking-wider block">LEAD MAGNET ACTIVE</span>
+                        <h4 class="text-base font-poppins font-bold text-white mt-0.5">FREE 10-Minute Neck & Shoulder Relief Demo At Home</h4>
+                        <p class="text-xs text-slate-300 mt-1">Experience deep, targeted muscle release right at your doorstep. Zero cost. Zero obligations.</p>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <button 
+                        onclick="document.getElementById('lead-form-section').scrollIntoView({ behavior: 'smooth' })"
+                        class="bg-brandLime text-[#0A192F] font-poppins font-black text-sm uppercase px-8 py-4 rounded-xl hover:bg-brandLime/90 hover:scale-105 active:scale-95 transition-all shadow-[0_10px_25px_-5px_rgba(163,230,53,0.3)] tracking-wide"
+                    >
+                        BOOK FREE DEMO
+                    </button>
+                </div>
+            </div>
+
+            <!-- Hero Right Lead Form -->
+            <div id="lead-form-section" class="md:col-span-5 relative">
+                <div class="absolute inset-0 bg-brandLime/5 rounded-[32px] blur-3xl pointer-events-none"></div>
+                <div class="bg-[#0b1329]/80 backdrop-blur-xl border border-white/10 p-8 rounded-3xl relative z-10 shadow-2xl">
+                    <h3 class="text-2xl font-poppins font-black text-white tracking-tight">Claim Your Free Demo</h3>
+                    <p class="text-xs text-slate-400 mt-1 leading-relaxed">Fill out your details to schedule a FREE 10-minute in-home neck and shoulder demo slot.</p>
+                    
+                    <form id="funnel-lead-form" class="space-y-4 mt-6">
+                        <input type="hidden" name="concern" value="Desk-job neck pain, shoulder stiffness, screen headaches & slouched posture">
+                        <div>
+                            <label class="block text-[11px] font-montserrat font-bold text-slate-400 uppercase tracking-widest mb-1.5">Full Name</label>
+                            <input required type="text" name="name" class="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-white focus:border-brandLime focus:bg-white/10 outline-none transition-all" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-montserrat font-bold text-slate-400 uppercase tracking-widest mb-1.5">Phone Number</label>
+                            <input required type="tel" name="phone" class="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-white focus:border-brandLime focus:bg-white/10 outline-none transition-all" placeholder="+91 99999 99999">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-montserrat font-bold text-slate-400 uppercase tracking-widest mb-1.5">Your Area / Location</label>
+                            <input required type="text" name="location" class="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-white focus:border-brandLime focus:bg-white/10 outline-none transition-all" placeholder="e.g. Salt Lake, Sector V">
+                        </div>
+                        <button type="submit" class="w-full bg-brandLime text-[#0A192F] font-poppins font-black text-xs uppercase py-4 rounded-xl hover:bg-brandLime/90 transition-all mt-4 tracking-wider flex items-center justify-center gap-2">
+                            <span>CONFIRM FREE DEMO</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. Quick Benefits Section -->
+    <section class="py-8 bg-[#EAF4F0] border-y border-[#cbe3d9]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12 text-sm md:text-base font-semibold text-[#0A4D3C]">
+                <div class="flex items-center gap-2">
+                    <span class="text-brandLimeDark font-black text-lg">✔</span>
+                    <span>Relax neck tension</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-brandLimeDark font-black text-lg">✔</span>
+                    <span>Reduce shoulder tightness</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-brandLimeDark font-black text-lg">✔</span>
+                    <span>Improve comfort during work</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-brandLimeDark font-black text-lg">✔</span>
+                    <span>Ease desk-job stiffness</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-brandLimeDark font-black text-lg">✔</span>
+                    <span>Professional home service</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Pain Identification Section -->
+    <section class="py-24 px-6 bg-white border-b border-[#EAF4F0]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-xs font-montserrat font-bold text-primary uppercase tracking-widest bg-[#EAF4F0] px-4 py-2 rounded-full border border-primary/10">
+                    IDENTIFYING THE PROBLEM
+                </span>
+                <h2 class="text-3xl md:text-5xl font-serif text-[#05261E] mt-4 font-extrabold tracking-tight">
+                    Does This Sound Familiar?
+                </h2>
+                <div class="w-16 h-1 bg-[#0A4D3C]/20 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Pain 1 -->
+                <div class="bg-[#FAFDFC] border border-[#EAF4F0] p-8 rounded-3xl hover:border-brandLime/30 hover:shadow-lg transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-500/10 flex items-center justify-center text-orange-600 text-xl mb-6">
+                        💆‍♂️
+                    </div>
+                    <h3 class="text-xl font-poppins text-[#0A4D3C] font-extrabold mb-3">Neck Stiffness After Work</h3>
+                    <p class="text-[#3D544E] text-sm leading-relaxed font-medium">
+                        That persistent, dull ache at the base of your skull that intensifies every afternoon and makes turning your head uncomfortable.
+                    </p>
+                </div>
+
+                <!-- Pain 2 -->
+                <div class="bg-[#FAFDFC] border border-[#EAF4F0] p-8 rounded-3xl hover:border-brandLime/30 hover:shadow-lg transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-500/10 flex items-center justify-center text-orange-600 text-xl mb-6">
+                        💪
+                    </div>
+                    <h3 class="text-xl font-poppins text-[#0A4D3C] font-extrabold mb-3">Shoulder Tightness</h3>
+                    <p class="text-[#3D544E] text-sm leading-relaxed font-medium">
+                        Trapezius muscles that feel like concrete blocks, locking your shoulders upwards and limiting your physical ease.
+                    </p>
+                </div>
+
+                <!-- Pain 3 -->
+                <div class="bg-[#FAFDFC] border border-[#EAF4F0] p-8 rounded-3xl hover:border-brandLime/30 hover:shadow-lg transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-500/10 flex items-center justify-center text-orange-600 text-xl mb-6">
+                        🧠
+                    </div>
+                    <h3 class="text-xl font-poppins text-[#0A4D3C] font-extrabold mb-3">Headaches from Screen Time</h3>
+                    <p class="text-[#3D544E] text-sm leading-relaxed font-medium">
+                        Tension headaches triggered by micro-spasms in the occipital muscles due to severe, constant screen staring.
+                    </p>
+                </div>
+
+                <!-- Pain 4 -->
+                <div class="bg-[#FAFDFC] border border-[#EAF4F0] p-8 rounded-3xl hover:border-brandLime/30 hover:shadow-lg transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-500/10 flex items-center justify-center text-orange-600 text-xl mb-6">
+                        🧍‍♂️
+                    </div>
+                    <h3 class="text-xl font-poppins text-[#0A4D3C] font-extrabold mb-3">Poor Workstation Posture</h3>
+                    <p class="text-[#3D544E] text-sm leading-relaxed font-medium">
+                        Slouching shoulders and a forward head tilt that strain your cervical column with up to 30 lbs of extra micro-load.
+                    </p>
+                </div>
+
+                <!-- Pain 5 -->
+                <div class="bg-[#FAFDFC] border border-[#EAF4F0] p-8 rounded-3xl hover:border-brandLime/30 hover:shadow-lg transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-500/10 flex items-center justify-center text-orange-600 text-xl mb-6">
+                        🔄
+                    </div>
+                    <h3 class="text-xl font-poppins text-[#0A4D3C] font-extrabold mb-3">Difficulty Turning Your Neck</h3>
+                    <p class="text-[#3D544E] text-sm leading-relaxed font-medium">
+                        Feeling a physical block or sudden pinch whenever you look left or right, indicating serious tissue restriction.
+                    </p>
+                </div>
+
+                <!-- Pain 6 -->
+                <div class="bg-[#FAFDFC] border border-[#EAF4F0] p-8 rounded-3xl hover:border-brandLime/30 hover:shadow-lg transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-2xl bg-orange-500/10 flex items-center justify-center text-orange-600 text-xl mb-6">
+                        🎒
+                    </div>
+                    <h3 class="text-xl font-poppins text-[#0A4D3C] font-extrabold mb-3">Constant Upper Back Tension</h3>
+                    <p class="text-[#3D544E] text-sm leading-relaxed font-medium">
+                        A heavy, tensed sensation resting continuously between your shoulder blades, exhausting your workday energy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Why This Happens Section -->
+    <section class="py-24 px-6 bg-[#FAFDFC] border-b border-[#EAF4F0]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-xs font-montserrat font-bold text-primary uppercase tracking-widest bg-[#EAF4F0] px-4 py-2 rounded-full border border-primary/10">
+                    UNDERSTANDING THE ROOT CAUSE
+                </span>
+                <h2 class="text-3xl md:text-5xl font-serif text-[#05261E] mt-4 font-extrabold tracking-tight">
+                    Your Body Wasn't Designed To Sit All Day.
+                </h2>
+                <div class="w-16 h-1 bg-[#0A4D3C]/20 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <!-- Infographic Left Cards -->
+                <div class="md:col-span-6 space-y-6">
+                    <div class="p-6 bg-white border border-[#EAF4F0] rounded-3xl flex gap-4 shadow-sm hover:shadow-md transition-all">
+                        <div class="text-primary text-2xl mt-1"><i class="fas fa-laptop"></i></div>
+                        <div>
+                            <h4 class="text-lg font-poppins font-bold text-[#0A4D3C] mb-1">Constant Laptop Work</h4>
+                            <p class="text-xs text-[#3D544E] leading-relaxed font-medium">
+                                Working on flat keyboard screens forces your cervical spine into a constant downwards bend, pulling upper neck vertebrae out of natural alignment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-white border border-[#EAF4F0] rounded-3xl flex gap-4 shadow-sm hover:shadow-md transition-all">
+                        <div class="text-primary text-2xl mt-1"><i class="fas fa-mobile-screen"></i></div>
+                        <div>
+                            <h4 class="text-lg font-poppins font-bold text-[#0A4D3C] mb-1">Mobile Phone Tilting ("Text Neck")</h4>
+                            <p class="text-xs text-[#3D544E] leading-relaxed font-medium">
+                                Tilting your head down 60 degrees to read notifications adds up to 60 lbs of heavy physical pressure onto your delicate cervical joints.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-white border border-[#EAF4F0] rounded-3xl flex gap-4 shadow-sm hover:shadow-md transition-all">
+                        <div class="text-primary text-2xl mt-1"><i class="fas fa-triangle-exclamation"></i></div>
+                        <div>
+                            <h4 class="text-lg font-poppins font-bold text-[#0A4D3C] mb-1">Workplace Stress Accumulation</h4>
+                            <p class="text-xs text-[#3D544E] leading-relaxed font-medium">
+                                Mental anxiety causes subconscious muscle tensing, locking up the trapezius and levator scapulae muscles continuously for hours.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Infographic Right Image -->
+                <div class="md:col-span-6 flex justify-center">
+                    <div class="relative w-full max-w-lg aspect-[16/9] rounded-[32px] overflow-hidden border border-[#EAF4F0] shadow-xl p-3 bg-white">
+                        <div class="relative w-full h-full rounded-2xl overflow-hidden bg-[#FAFDFC]">
+                            <img
+                                src="office-worker-neck-pain.png"
+                                alt="Corporate professional holding stiff neck in pain at workplace"
+                                class="object-cover w-full h-full"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Benefits of the Demo Section -->
+    <section class="py-24 px-6 bg-white border-b border-[#EAF4F0]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-xs font-montserrat font-bold text-primary uppercase tracking-widest bg-[#EAF4F0] px-4 py-2 rounded-full border border-primary/10">
+                    EXPERIENCING THE DIFFERENCE
+                </span>
+                <h2 class="text-3xl md:text-5xl font-serif text-[#05261E] mt-4 font-extrabold tracking-tight">
+                    How This Free Demo Can Help
+                </h2>
+                <div class="w-16 h-1 bg-[#0A4D3C]/20 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Benefit 1 -->
+                <div class="bg-[#FAFDFC] border border-[#EAF4F0] p-6 rounded-2xl shadow-sm text-center space-y-4">
+                    <span class="text-3xl block">🍃</span>
+                    <h4 class="text-base font-poppins font-bold text-[#0A4D3C]">Feel Lighter & Relaxed</h4>
+                    <p class="text-[#3D544E] text-xs font-medium leading-relaxed">
+                        Releases years of built-up pressure inside myofascial shoulder tissues in minutes.
+                    </p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="bg-[#FAFDFC] border border-[#EAF4F0] p-6 rounded-2xl shadow-sm text-center space-y-4">
+                    <span class="text-3xl block">💆‍♀️</span>
+                    <h4 class="text-base font-poppins font-bold text-[#0A4D3C]">Release Skull Neck Locks</h4>
+                    <p class="text-[#3D544E] text-xs font-medium leading-relaxed">
+                        Clears suboccipital spasms, reducing vascular pressure and screen headaches.
+                    </p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="bg-[#FAFDFC] border border-[#EAF4F0] p-6 rounded-2xl shadow-sm text-center space-y-4">
+                    <span class="text-3xl block">🔄</span>
+                    <h4 class="text-base font-poppins font-bold text-[#0A4D3C]">Improve Shoulder Mobility</h4>
+                    <p class="text-[#3D544E] text-xs font-medium leading-relaxed">
+                        Stretches deep clavicle joints, returning shoulders back into natural rest states.
+                    </p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="bg-[#FAFDFC] border border-[#EAF4F0] p-6 rounded-2xl shadow-sm text-center space-y-4">
+                    <span class="text-3xl block">💼</span>
+                    <h4 class="text-base font-poppins font-bold text-[#0A4D3C]">Workplace Spacing Comfort</h4>
+                    <p class="text-[#3D544E] text-xs font-medium leading-relaxed">
+                        Unlocks passive movement structures, keeping you energetic and pain-free at your desk.
+                    </p>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div class="bg-[#FAFDFC] border border-[#EAF4F0] p-6 rounded-2xl shadow-sm text-center space-y-4">
+                    <span class="text-3xl block">🏡</span>
+                    <h4 class="text-base font-poppins font-bold text-[#0A4D3C]">Doorstep Care Support</h4>
+                    <p class="text-[#3D544E] text-xs font-medium leading-relaxed">
+                        Experience premium assisted wellness without driving to distant clinical offices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Home Service Section -->
+    <section class="py-24 px-6 bg-[#0A192F] text-white overflow-hidden relative border-b border-white/5">
+        <div class="absolute top-0 right-1/4 w-[400px] h-[400px] rounded-full bg-brandLime/5 blur-[150px] pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto text-center space-y-8 relative z-10">
+            <span class="inline-block text-xs font-montserrat font-bold text-brandLime uppercase tracking-wider bg-brandLime/10 px-4 py-2 rounded-full border border-brandLime/20">
+                ELITE CONCIERGE WELLNESS
+            </span>
+            <h2 class="text-3xl md:text-5xl font-serif text-white tracking-tight font-extrabold">
+                We Come To Your Home
+            </h2>
+            <p class="text-slate-300 text-sm md:text-base leading-relaxed max-w-xl mx-auto font-light">
+                Why waste the therapeutic physical benefits of a pain-release session by driving through stressful post-work city traffic immediately after?
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6 pt-4 text-left">
+                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl shadow-sm backdrop-blur-sm">
+                    <div class="text-2xl text-brandLime mb-3"><i class="fas fa-clinic-medical"></i></div>
+                    <h4 class="text-base font-poppins font-bold text-white mb-2">No Commutes</h4>
+                    <p class="text-slate-300 text-xs font-light">Skip the post-session driving tension. We perform the entire treatment right inside your sanctuary.</p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl shadow-sm backdrop-blur-sm">
+                    <div class="text-2xl text-brandLime mb-3"><i class="fas fa-user-tie"></i></div>
+                    <h4 class="text-base font-poppins font-bold text-white mb-2">No Waiting Rooms</h4>
+                    <p class="text-slate-300 text-xs font-light">Eliminate clinic check-in friction. Our certified posture therapist arrives directly at your booked hour.</p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl shadow-sm backdrop-blur-sm">
+                    <div class="text-2xl text-brandLime mb-3"><i class="fas fa-house-chimney"></i></div>
+                    <h4 class="text-base font-poppins font-bold text-white mb-2">Doorstep Luxury Setup</h4>
+                    <p class="text-slate-300 text-xs font-light">Certified stretching support delivered straight to your living room. Comfort, safety, and absolute peace.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Founder Story Section -->
+    <section class="py-24 px-6 bg-gradient-to-b from-[#FAFDFC] to-[#EAF4F0]">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-xs font-montserrat font-bold text-primary uppercase tracking-widest bg-primary/5 px-4 py-2 rounded-full border border-primary/10">
+                    Why AAATOAHH Exists
+                </span>
+                <h2 class="text-3xl md:text-5xl font-poppins font-extrabold text-[#05261E] mt-4 tracking-tight">
+                    The Genesis of Restorative Comfort
+                </h2>
+                <div class="w-16 h-1 bg-primary/20 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-5 gap-12 items-center">
+                <!-- Founder Card -->
+                <div class="md:col-span-2 text-center md:text-left space-y-4">
+                    <div class="relative w-44 h-44 mx-auto md:mx-0 rounded-3xl overflow-hidden border border-primary/20 p-1.5 bg-white shadow-md">
+                        <div class="relative w-full h-full rounded-2xl overflow-hidden bg-[#EAF4F0]">
+                            <img
+                                src="hero-image-2.jpeg"
+                                alt="Founder of AAATOAHH"
+                                class="object-cover w-full h-full"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-poppins font-bold text-[#05261E]">Abhishek Dev</h3>
+                        <p class="text-xs font-montserrat text-slate-500 uppercase tracking-wider font-bold">FOUNDER, AAATOAHH.IN</p>
+                    </div>
+                </div>
+
+                <!-- Personal Story Content -->
+                <div class="md:col-span-3 space-y-6 text-[#3D544E] text-sm md:text-base font-medium leading-relaxed">
+                    <p>
+                        "Every single day, corporate professionals and office employees push their limits in front of computers. Sit-down meetings, 10-hour days typing, and continuous mobile phone staring are taking a massive toll: <strong class="text-[#05261E] font-bold">modern work life is creating more neck pain, poor posture, stress, and physical discomfort than ever before.</strong>"
+                    </p>
+                    <p>
+                        "We noticed that professionals were simply letting this neck stiffness build up until it turned into severe tension headaches, or they were wasting exhausted post-work hours traveling to clinical massage centers that felt crowded and clinical."
+                    </p>
+                    <p>
+                        "That is why we built <span class="text-primary font-bold">AAATOAHH</span>. We designed an elite home-visit service so busy professionals can receive targeted postural releases and deep assisted stretching comfortably at home, feeling better without disrupting their precious daily routines."
+                    </p>
+                    <span class="text-lg font-serif italic text-[#05261E] block font-semibold pt-2">
+                        "Your body wasn't made to suffer through desk jobs. Let us bring deep physical recovery right to you."
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Testimonials Section -->
+    <section class="py-24 px-6 bg-white border-y border-[#EAF4F0]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-xs font-montserrat font-bold text-primary uppercase tracking-widest bg-[#FAFDFC] px-4 py-2 rounded-full border border-primary/10">
+                    TRUSTED BY PROFESSIONALS
+                </span>
+                <h2 class="text-3xl md:text-5xl font-serif text-[#05261E] mt-4 font-extrabold tracking-tight">
+                    Corporate Success Stories
+                </h2>
+                <div class="w-16 h-1 bg-[#0A4D3C]/20 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-[#FAFDFC] border border-[#EAF4F0] p-8 rounded-3xl relative shadow-sm hover:shadow-md transition-all">
+                    <i class="fas fa-quote-left text-4xl text-[#0A4D3C]/5 absolute top-8 left-8"></i>
+                    <div class="relative z-10 pl-4 pt-2">
+                        <div class="flex text-yellow-500 mb-4 gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-[#3D544E] text-base md:text-lg italic mb-6 font-medium leading-relaxed">
+                            "Working on a laptop 9 hours a day left me with severe neck stiffness and constant screen headaches. The 10-minute home demo was an eye-opener—my shoulders felt lighter instantly! I immediately booked their regular assisted stretching program."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white border border-primary/10 rounded-full flex items-center justify-center text-primary font-serif font-bold text-xl shadow-sm">R</div>
+                            <div>
+                                <h4 class="text-[#05261E] font-bold">Rohan Sen</h4>
+                                <p class="text-slate-500 text-xs font-semibold uppercase">Senior Software Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-[#FAFDFC] border border-[#EAF4F0] p-8 rounded-3xl relative shadow-sm hover:shadow-md transition-all">
+                    <i class="fas fa-quote-left text-4xl text-[#0A4D3C]/5 absolute top-8 left-8"></i>
+                    <div class="relative z-10 pl-4 pt-2">
+                        <div class="flex text-yellow-500 mb-4 gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-[#3D544E] text-base md:text-lg italic mb-6 font-medium leading-relaxed">
+                            "As a WFH consultant, my posture was terrible. My shoulders felt locked upwards constantly. Having a therapist visit my home and perform passive neck decompression is a complete game-changer. Absolutely recommend this service!"
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white border border-primary/10 rounded-full flex items-center justify-center text-primary font-serif font-bold text-xl shadow-sm">M</div>
+                            <div>
+                                <h4 class="text-[#05261E] font-bold">Megha Shah</h4>
+                                <p class="text-slate-500 text-xs font-semibold uppercase">Corporate Business Consultant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FAQ Section -->
+    <section class="py-24 px-6 bg-[#FAFDFC]">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-xs font-montserrat font-bold text-primary uppercase tracking-widest bg-[#EAF4F0] px-4 py-2 rounded-full border border-primary/10">
+                    FREQUENTLY ASKED QUESTIONS
+                </span>
+                <h2 class="text-3xl md:text-5xl font-serif text-[#05261E] mt-4 font-extrabold tracking-tight">
+                    Questions & Clarifications
+                </h2>
+                <div class="w-16 h-1 bg-primary/20 mx-auto mt-4"></div>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="bg-white border border-[#EAF4F0] p-6 rounded-2xl shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+                    <h4 class="text-base md:text-lg font-poppins font-bold text-[#0A4D3C] flex justify-between items-center gap-3">
+                        <span><i class="far fa-question-circle text-brandLimeDark"></i> Is this available at home?</span>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </h4>
+                    <p class="text-xs md:text-sm text-[#3D544E] mt-3 pl-7 leading-relaxed font-medium hidden">
+                        Yes! We are a 100% home doorstep service. Our certified postural therapist travels directly to your home with a premium mobile wellness kit, so you never have to commute or wait in clinical lobby offices.
+                    </p>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white border border-[#EAF4F0] p-6 rounded-2xl shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+                    <h4 class="text-base md:text-lg font-poppins font-bold text-[#0A4D3C] flex justify-between items-center gap-3">
+                        <span><i class="far fa-question-circle text-brandLimeDark"></i> How long does the demo take?</span>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </h4>
+                    <p class="text-xs md:text-sm text-[#3D544E] mt-3 pl-7 leading-relaxed font-medium hidden">
+                        The free initial home demonstration takes approximately 10 minutes of active release. Our specialist will assess your desk posture restrictions, perform physical cervical/shoulder release testing, and demonstrate our targeted assisted traction.
+                    </p>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white border border-[#EAF4F0] p-6 rounded-2xl shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+                    <h4 class="text-base md:text-lg font-poppins font-bold text-[#0A4D3C] flex justify-between items-center gap-3">
+                        <span><i class="far fa-question-circle text-brandLimeDark"></i> Do I need any equipment?</span>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </h4>
+                    <p class="text-xs md:text-sm text-[#3D544E] mt-3 pl-7 leading-relaxed font-medium hidden">
+                        No, you don't need any equipment at all! Our expert arrives fully prepared with premium therapeutic oils, specialized alignment rolls, and clean support towels. You only need a comfortable couch or bed space.
+                    </p>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white border border-[#EAF4F0] p-6 rounded-2xl shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+                    <h4 class="text-base md:text-lg font-poppins font-bold text-[#0A4D3C] flex justify-between items-center gap-3">
+                        <span><i class="far fa-question-circle text-brandLimeDark"></i> Is this suitable for people who work on laptops all day?</span>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </h4>
+                    <p class="text-xs md:text-sm text-[#3D544E] mt-3 pl-7 leading-relaxed font-medium hidden">
+                        Absolutely. It was designed specifically for laptop professionals and desk-bound workers. Sitting continuously causes shoulder hunching and forward neck tilt. Our passive stretching actively counteracts this screen strain posture.
+                    </p>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-white border border-[#EAF4F0] p-6 rounded-2xl shadow-sm cursor-pointer" onclick="toggleFaq(this)">
+                    <h4 class="text-base md:text-lg font-poppins font-bold text-[#0A4D3C] flex justify-between items-center gap-3">
+                        <span><i class="far fa-question-circle text-brandLimeDark"></i> Can this help with neck and shoulder tightness?</span>
+                        <i class="fas fa-chevron-down text-slate-400 transition-transform"></i>
+                    </h4>
+                    <p class="text-xs md:text-sm text-[#3D544E] mt-3 pl-7 leading-relaxed font-medium hidden">
+                        Yes! We focus heavily on releasing the suboccipital skull base, upper trapezius, and deep levator scapulae muscles, which are the main physical hotspots responsible for corporate neck stiffness and desk headaches.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Final CTA Section -->
+    <section class="py-24 px-6 bg-[#0A192F] text-white text-center relative overflow-hidden border-t border-white/5">
+        <div class="absolute inset-0 bg-brandLime/5 blur-3xl pointer-events-none"></div>
+        <div class="max-w-3xl mx-auto relative z-10 space-y-6">
+            <h2 class="text-3xl md:text-5xl font-serif text-white tracking-tight font-extrabold leading-tight">
+                Your Neck Works Hard Every Day. <br />
+                <span class="text-brandLime italic font-serif">Give It The Recovery It Deserves.</span>
+            </h2>
+            <p class="text-slate-300 text-sm md:text-base font-light max-w-xl mx-auto leading-relaxed">
+                Claim your 100% free, zero-obligation home demo. Let a certified specialist show you what real, professional neck and shoulder relief feels like.
+            </p>
+            <div class="pt-4">
+                <button
+                    onclick="document.getElementById('lead-form-section').scrollIntoView({ behavior: 'smooth' })"
+                    class="bg-brandLime text-[#0A192F] font-poppins font-black text-sm uppercase px-8 py-4 rounded-xl hover:bg-brandLime/90 hover:scale-105 active:scale-95 transition-all shadow-[0_10px_25px_-5px_rgba(163,230,53,0.3)] duration-300"
+                >
+                    BOOK FREE DEMO
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Floating WhatsApp and Call -->
+    <div class="fixed bottom-6 right-4 z-40 flex flex-col gap-3">
+        <!-- Call Support -->
+        <a 
+            href="tel:+917908082151" 
+            class="w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all"
+        >
+            <i class="fas fa-phone text-lg"></i>
+        </a>
+        <!-- WhatsApp -->
+        <a 
+            href="https://wa.me/917908082151?text=Hi!%20I%20want%20to%20book%20a%20FREE%20Office%20Neck%20Pain%20Demo%20session." 
+            target="_blank" 
+            class="w-12 h-12 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all relative"
+        >
+            <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-75 animate-ping pointer-events-none"></span>
+            <i class="fab fa-whatsapp text-2xl relative z-10"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Toggle FAQ Accordion
+        function toggleFaq(el) {
+            const p = el.querySelector('p');
+            const icon = el.querySelector('.fa-chevron-down');
+            p.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Form submission simulated save to Supabase / Redirect
+        const SUPABASE_URL = 'https://tbdmuznvuezgjjvlorhg.supabase.co/rest/v1/';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRiZG11em52dWV6Z2pqdmxvcmhnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg4NjM1NTMsImV4cCI6MjA5NDQzOTU1M30.L83DhdnmRNHovfubhbJUxqAlMOrkaYKoq-ET_hOwRXw';
+
+        const form = document.getElementById('funnel-lead-form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner animate-spin"></i> SECURING SLOT...';
+
+            const formData = new FormData(form);
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+            const location = formData.get('location');
+            const concern = formData.get('concern');
+
+            const payload = {
+                customerName: name,
+                customerPhone: phone,
+                customerAddress: location,
+                service: "Free Office Neck & Shoulder Demo",
+                price: 0,
+                date: new Date().toISOString().split('T')[0],
+                time: "Demo Request",
+                bookedAt: new Date().toISOString()
+            };
+
+            try {
+                // Post to Supabase
+                await fetch(`${SUPABASE_URL}bookings`, {
+                    method: 'POST',
+                    headers: {
+                        'apikey': SUPABASE_KEY,
+                        'Authorization': `Bearer ${SUPABASE_KEY}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+            } catch (err) {
+                console.error("Failed to post lead", err);
+            }
+
+            // Save to LocalStorage logs
+            const existingLeads = JSON.parse(localStorage.getItem('funnel_leads') || '[]');
+            existingLeads.push({ name, phone, location, concern, bookedAt: payload.bookedAt });
+            localStorage.setItem('funnel_leads', JSON.stringify(existingLeads));
+
+            // Redirect to Thank You Page
+            window.location.href = '/thank-you-neck-pain';
+        });
+    </script>
+</body>
+</html>
