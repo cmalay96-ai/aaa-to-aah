@@ -23,7 +23,7 @@ export default function Home() {
             Professional Recovery & Mobility <br/>
             <span className="text-primary italic">At Your Home</span>
           </h1>
-          <p className="text-xl md:text-2xl text-textSecondary mb-10 font-medium">
+          <p className="text-xl md:text-2xl text-textSecondary mb-5 font-medium">
             Relax, Recover & Recharge with Expert Assisted Stretching & Release Services
           </p>
           <Link 
