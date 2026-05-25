@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative h-screen flex flex-col justify-start items-center text-center pt-[32vh] pb-12 px-4 overflow-hidden bg-sea-radial">
+      <section className="relative h-screen flex flex-col justify-start items-center text-center pt-[55vh] pb-12 px-4 overflow-hidden bg-sea-radial">
         <div className="absolute inset-0 z-0">
           <Image
             src="/hero-image-2.jpeg"
