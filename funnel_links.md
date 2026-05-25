@@ -29,11 +29,13 @@ Designed for high-converting Meta / Google ads, targeting specific customer pain
 
 *   🧠 **Neck & Headache Relief Landing Page**  
     *Purpose:* Neck stiffness, tension headaches, cervical discomfort relief.  
-    *URL:* [https://aaatoahh.in/neck-headache-relief](https://aaatoahh.in/neck-headache-relief)
+    *Clean URL:* [https://aaatoahh.in/neck-headache-relief](https://aaatoahh.in/neck-headache-relief)  
+    *Static File URL:* [https://aaatoahh.in/neck-headache-relief.html](https://aaatoahh.in/neck-headache-relief.html)
 
 *   💼 **Neck Pain (Office Workers) Landing Page**  
     *Purpose:* Desk posture alignment, screen strain relief, shoulder/neck stiffness.  
-    *URL:* [https://aaatoahh.in/neck-pain-office-workers](https://aaatoahh.in/neck-pain-office-workers)
+    *Clean URL:* [https://aaatoahh.in/neck-pain-office-workers](https://aaatoahh.in/neck-pain-office-workers)  
+    *Static File URL:* [https://aaatoahh.in/neck-pain-office-workers.html](https://aaatoahh.in/neck-pain-office-workers.html)
 
 ---
 
@@ -56,10 +58,12 @@ Redirects automatically upon successful form submission.
     *URL:* [https://aaatoahh.in/thank-you-sleep-relaxation](https://aaatoahh.in/thank-you-sleep-relaxation)
 
 *   **Neck & Headache Relief Thank You**  
-    *URL:* [https://aaatoahh.in/thank-you-neck-headache](https://aaatoahh.in/thank-you-neck-headache)
+    *Clean URL:* [https://aaatoahh.in/thank-you-neck-headache](https://aaatoahh.in/thank-you-neck-headache)  
+    *Static File URL:* [https://aaatoahh.in/thank-you-neck-headache.html](https://aaatoahh.in/thank-you-neck-headache.html)
 
 *   **Neck Pain (Office Workers) Thank You**  
-    *URL:* [https://aaatoahh.in/thank-you-neck-pain](https://aaatoahh.in/thank-you-neck-pain)
+    *Clean URL:* [https://aaatoahh.in/thank-you-neck-pain](https://aaatoahh.in/thank-you-neck-pain)  
+    *Static File URL:* [https://aaatoahh.in/thank-you-neck-pain.html](https://aaatoahh.in/thank-you-neck-pain.html)
 
 ---
 
