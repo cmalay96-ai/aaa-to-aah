@@ -6,8 +6,19 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col justify-between items-center text-center pt-32 pb-16 px-4 bg-sea-radial">
-        <div className="max-w-4xl mx-auto z-10 px-4">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-sea-radial">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero-image-2.jpeg"
+            alt="Elite Wellness Assisted Stretching & Massage"
+            fill
+            priority
+            className="object-cover object-top opacity-[0.35] saturate-[0.9] mix-blend-multiply"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#EAF4F0]/30 via-transparent to-background z-0" />
+        
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-serif mb-6 text-textPrimary tracking-wide leading-tight">
             Professional Recovery & Mobility <br/>
             <span className="text-primary italic">At Your Home</span>
@@ -21,21 +32,6 @@ export default function Home() {
           >
             Book Your Session
           </Link>
-        </div>
-
-        {/* Padded Full Image Container */}
-        <div className="w-full max-w-4xl px-4 md:px-8 mt-12 z-10">
-          <div className="bg-white/80 border border-primary/10 p-3 md:p-4 rounded-[32px] shadow-lg">
-            <div className="relative rounded-2xl overflow-hidden w-full aspect-[16/9]">
-              <Image
-                src="/hero-image-2.jpeg"
-                alt="Elite Wellness Assisted Stretching & Massage"
-                fill
-                priority
-                className="object-contain"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
