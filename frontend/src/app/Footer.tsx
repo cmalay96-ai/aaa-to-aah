@@ -21,6 +21,8 @@ export default function Footer() {
     "/thank-you-sleep-relaxation",
     "/neck-headache-relief",
     "/thank-you-neck-headache",
+    "/neck-pain-office-workers",
+    "/thank-you-neck-pain",
   ];
 
   // Also hide if it starts with /thank-you-

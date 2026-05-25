@@ -27,6 +27,14 @@ Designed for high-converting Meta / Google ads, targeting specific customer pain
     *Purpose:* Stress management, nervous system release, sleep cycle improvements, REM sleep.  
     *URL:* [https://aaatoahh.in/sleep-relaxation](https://aaatoahh.in/sleep-relaxation)
 
+*   🧠 **Neck & Headache Relief Landing Page**  
+    *Purpose:* Neck stiffness, tension headaches, cervical discomfort relief.  
+    *URL:* [https://aaatoahh.in/neck-headache-relief](https://aaatoahh.in/neck-headache-relief)
+
+*   💼 **Neck Pain (Office Workers) Landing Page**  
+    *Purpose:* Desk posture alignment, screen strain relief, shoulder/neck stiffness.  
+    *URL:* [https://aaatoahh.in/neck-pain-office-workers](https://aaatoahh.in/neck-pain-office-workers)
+
 ---
 
 ## 🎁 2. Matching Thank You Pages
@@ -46,6 +54,12 @@ Redirects automatically upon successful form submission.
 
 *   **Sleep & Relaxation Thank You**  
     *URL:* [https://aaatoahh.in/thank-you-sleep-relaxation](https://aaatoahh.in/thank-you-sleep-relaxation)
+
+*   **Neck & Headache Relief Thank You**  
+    *URL:* [https://aaatoahh.in/thank-you-neck-headache](https://aaatoahh.in/thank-you-neck-headache)
+
+*   **Neck Pain (Office Workers) Thank You**  
+    *URL:* [https://aaatoahh.in/thank-you-neck-pain](https://aaatoahh.in/thank-you-neck-pain)
 
 ---
 
